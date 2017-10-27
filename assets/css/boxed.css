@@ -1,0 +1,75 @@
+/**
+ * 	Name: boxed.css
+ *
+ *	-
+ *
+ * 	This file contains an alternative styling to make the layout boxed. 
+ * 	The boxed version also comes with a few background options that you can choose from.
+ *
+ */
+ 
+/* ==========================================================================
+   =Boxed Layout 
+   ========================================================================== */
+
+	/**
+	 * 1. An alternative background can be chosen, just uncomment the one you want
+	 * 	  The backgrounds can be seen in the /images folder 	
+	 */
+		 
+	body { 
+		background: #fff url(../images/bg-body.png) repeat top left; /* 1 */
+		
+		/*
+		background: #fff url(../images/bg-body2.png) repeat top left; 
+		background: #fff url(../images/bg-body3.png) repeat top left;
+		background: #fff url(../images/bg-body4.png) repeat top left;
+		background: #fff url(../images/bg-body5.png) repeat top left;
+		background: #fff url(../images/bg-body6.png) repeat top left;
+		background: #fff url(../images/bg-body7.png) repeat top left;
+		background: #fff url(../images/bg-body8.png) repeat top left;
+		background: #fff url(../images/bg-body9.png) repeat top left;
+		background: #fff url(../images/bg-body10.png) repeat top left;
+		background: #fff url(../images/bg-body11.png) repeat top left;
+		background: #fff url(../images/bg-body12.png) repeat top left;
+		background: #fff url(../images/bg-body13.png) repeat top left;
+		background: #fff url(../images/bg-body14.png) repeat top left;
+		background: #fff url(../images/bg-body15.png) repeat top left;
+		background: #fff url(../images/bg-body16.png) repeat top left;
+		background: #fff url(../images/bg-body17.png) repeat top left;
+		background: #fff url(../images/bg-body18.png) repeat top left;
+		background: #fff url(../images/bg-body19.png) repeat top left;
+		background: #fff url(../images/bg-body20.png) repeat top left;
+		background: #fff url(../images/bg-body21.jpg) no-repeat fixed top left;
+		background: #fff url(../images/bg-body22.jpg) no-repeat fixed top left;
+		background: #fff url(../images/bg-body23.jpg) no-repeat fixed top left;
+		*/
+	}
+	
+	#wrap {
+		max-width: 1140px; 
+		margin: 0 auto;
+		-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);  
+		   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);    
+		        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);  
+	}
+	
+	#header { max-width: 1140px; }
+	
+	@media (min-width: 1200px) {
+		
+		#wrap {	max-width: 1340px; }
+		
+		#header { max-width: 1340px; }
+		
+	}
+	
+	@media (max-width: 1140px) {
+	
+		#wrap {
+			-webkit-box-shadow: none;  
+			   -moz-box-shadow: none;     
+		            box-shadow: none;  
+		}
+	
+	}

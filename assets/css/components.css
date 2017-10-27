@@ -1,0 +1,2362 @@
+/**
+ * 	Name: components.css
+ *
+ *  Styling for the components that create the page content: accordion, tabs, pie charts etc.
+ *
+ *  T.O.C
+ *
+ *	=Accordions and Toggles
+ *	=Alerts
+ *	=Animations
+ *  =Boxes
+ *	=Buttons
+ *  =Callouts
+ *  =Clients logo
+ *	=Contact form
+ *	=Dividers
+ *  =Dropcaps
+ *	=Galleries
+ *	=Google Maps
+ *	=Headlines
+ *	=Icon Boxes
+ *  =Image Box
+ *  =Info box
+ *	=Milestones
+ *  =Modal window
+ *	=Our Process
+ *	=Pie charts
+ *	=Pricing Tables
+ *	=Progress Bar
+ *	=Revolution Slider
+ *	=Social Media
+ *	=Tabs
+ *	=Testimonials
+ *	=Team Member
+ *	=Portfolio Item
+ *	=Portfolio Filter
+ *	=Portfolio Pagination
+ *	=Portfolio Grid
+ *	=Bx Slider 
+ *
+ */
+ 
+/* ==========================================================================
+   =Accordions and Toggles
+   ========================================================================== */
+
+/* =Accordion
+   ========================================================================== */
+	
+	.accordion { margin-bottom: 50px; }
+
+	.accordion-item {
+		position: relative;
+		display: block;
+		padding: 15px 30px;
+		border: 2px solid #e6e6e6;
+		margin-bottom: 25px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	a.accordion-item { color: #222; }
+	
+	.accordion-item:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.accordion-item.active:after { content: "-"; }
+	
+	.accordion-item:hover,
+	.accordion-item.active {
+		border-color: #f9b125;
+		background-color: #f9b125;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.accordion-item-content { 
+		display: none; 
+		padding: 10px 0 40px 0; 
+	}
+	
+	.accordion-item-content > *:last-child { margin-bottom: 0; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.accordion-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+	
+/* =Toggle
+   ========================================================================== */
+	
+	.toggle { margin-bottom: 30px; }
+
+	.toggle-item {
+		position: relative;
+		display: block;
+		padding: 15px 30px;
+		border: 2px solid #e6e6e6;
+		margin-bottom: 25px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	a.toggle-item { color: #222; }
+	
+	.toggle-item:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.toggle-item.active:after { content: "-"; }
+	
+	.toggle-item:hover,
+	.toggle-item.active {
+		border-color: #f9b125;
+		background-color: #f9b125;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.toggle-item-content { 
+		display: none; 
+		padding: 10px 0 40px 0; 
+	}
+	
+	.toggle-item-content > *:last-child { margin-bottom: 0; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.toggle-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+
+/* ==========================================================================
+   =Alerts
+   ========================================================================== */
+
+	/*.alert {
+		padding: 15px 15px 15px 30px;
+		margin-bottom: 30px;
+		background-color: #4b4b4b;
+		color: #fff;
+	}*/
+	
+	.alert i {
+		position: relative;
+		top: 2px;
+		margin-right: 10px;
+		font-size: 20px;
+	}
+	
+	.alert.info {
+		background-color: #f6f6f6;
+		color: #222;
+	}
+	
+	.alert.success { 
+		background-color: #e5e5e5;
+		color: #222;
+	}
+	
+	/*.alert.error { background-color: #ff3225; }*/
+	
+	.alert.warning { background-color: #ee9f21; }
+	
+/* ==========================================================================
+   =Animations
+   ========================================================================== */
+   
+   .animate {
+		-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+		visibility: hidden;
+	}
+
+	.animate.visible { visibility: visible; }
+	.animate.hidden { visibility: hidden; }
+
+/* ==========================================================================
+   =Boxes
+   ========================================================================== */
+
+	.box { 
+		padding: 30px; 
+		margin-bottom: 30px;
+	}
+	
+	.box  > *:last-child { margin-bottom: 0; } 
+
+	.box.box-style-1 {
+		border-radius: 2px;
+		border: 1px solid #e6e6e6;
+	}
+
+	.box.box-style-2 { 
+		background-color: #f3f3f3;
+		color: #222;
+	}
+   
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.box:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+	
+/* ==========================================================================
+   =Buttons
+   ========================================================================== */
+
+/* =Default Button
+   ========================================================================== */
+   
+	.btn {
+		position: relative; 
+		display: inline-block; 
+		padding: 6px 20px 6px 20px; 
+		margin: 0 5px 20px 0;
+		background-color: #ee9f23;
+		color: #fff;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-decoration: none !important;
+		text-transform: uppercase;
+		vertical-align: middle;
+		cursor: pointer;
+		text-align:center;
+		-webkit-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+	
+	/*.btn:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0; 
+		height: 0; 
+		border-top: 21px solid transparent; 
+		border-bottom: 21px solid transparent;
+		border-left: 30px solid #f9b125;
+		content: "";
+		-webkit-transition: border-left-color 0.3s;
+				transition: border-left-color 0.3s; 
+	}
+	*/
+	a.btn { color: #000; }
+	a.btn:hover { color: #000; }
+	
+	.btn:focus { outline: 0; }
+	
+	.btn-large {
+		padding: 15px 35px 15px 50px; 
+		font-size: 14px;
+	}
+	
+	.btn-large:before {
+		border-top: 24px solid transparent; 
+		border-bottom: 24px solid transparent;
+	}
+	
+	.btn i,
+	.btn-large i { 
+		float: left; 
+		margin: 2px 8px 0 -4px;
+		font-size: 14px; 
+		line-height: 14px; 
+	}
+	
+	.btn:hover { background: #f9b125; }
+	.btn:hover:before { border-left-color: #ee9f23; }
+
+/* ==========================================================================
+   =Callouts
+   ========================================================================== */
+
+	.callout { 
+		padding: 30px 0 35px 40px;
+		border-left: 7px solid #ee9f23;
+		margin-bottom: 30px;
+	}	
+	
+	.callout-content { font-weight: 600; }
+	
+	.callout-content h3 { text-transform: uppercase; }
+	
+	.callout-action { text-align: right; }
+	
+	.callout-action .btn { margin-top: 28px; }
+
+	.callout-content > *:last-child,
+	.callout-action > *:last-child {
+		margin-bottom: 0; 
+	}
+
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.callout:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+	
+	@media (max-width: 767px) {
+		
+		.callout-action { text-align: left; }
+		
+	}
+	
+/* ==========================================================================
+   =Clients logos
+   ========================================================================== */
+	
+	.clients-logos {
+		margin: 50px 0;
+		list-style: none;
+		text-align: center;
+	}
+	
+	.clients-logos li {
+		float: left;
+		width: 25%;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.clients-logos:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.clients-logos li {
+			float: none;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		
+		.clients-logos li:last-child { margin-bottom: 0; }
+		
+	}
+   
+/* ==========================================================================
+   =Contact form
+   ========================================================================== */
+  
+	#contact-form { 
+		overflow: hidden; 
+		margin: 40px 0; 
+	}
+	
+	#contact-form fieldset {}
+	
+	label.validation-error { color: #ff3225; }
+	
+	input.validation-error,
+	textarea.validation-error,
+	select.validation-error { border: 1px solid #e6e6e6; }
+	
+	#contact-form #formstatus {}
+		
+	#contact-form textarea {}	
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	#contact-form:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+
+/* ==========================================================================
+   =Dividers
+   ========================================================================== */
+
+	.divider { margin: 30px 0; }
+	
+	.divider.single-line { border-top: 2px solid #e6e6e6; }
+	
+	.divider.double-line { border-top: 4px double #e6e6e6; }
+
+/* ==========================================================================
+   =Dropcaps
+   ========================================================================== */
+   
+	.dropcap {
+		float: left;
+		display: block;
+		margin: 5px 10px 0 0;
+		font-size: 34px;
+		line-height: 36px;
+	}
+	
+	.dropcap.dropcap-square {
+		width: 42px;
+		height: 42px;
+		border-radius: 2px;
+		background-color: #f9b125;		
+		color: #ffffff;
+		font-size: 20px;		
+		line-height: 42px;
+		text-align: center;
+		
+	}
+	
+	.dropcap.dropcap-circle {
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		background-color: #f9b125;		
+		color: #ffffff;
+		font-size: 20px;		
+		line-height: 42px;
+		text-align: center;
+	}
+   
+/* ==========================================================================
+   =Galleries
+   ========================================================================== */
+	
+	
+	
+/* ==========================================================================
+   =Google Maps
+   ========================================================================== */
+
+	.google-map {
+		width: 100%; 
+		height: 400px;
+		border-top: 7px solid #f9b125;
+	}
+	
+	/**
+	 * 1. needed so that Google Maps controls are not distorted
+	 */
+	
+	.google-map  img { max-width: none; }	/* 1 */
+	
+	.map {
+		position: relative;
+		border-top: 7px solid #ee9f23;
+		margin-bottom: 100px; 
+	}
+	
+	.map:before {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 50%;
+		width: 0; 
+		height: 0; 
+		border-top: 30px solid #ee9f23;
+		border-right: 15px solid transparent; 
+		border-left: 15px solid transparent;
+		content: "";
+		-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+	}
+	
+	@media (max-width: 767px) {
+
+		.map { padding: 0 20px; }
+		.row .map { padding: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Headlines
+   ========================================================================== */
+
+	.headline {
+		position: relative;
+		padding-bottom: 10px;
+		
+		text-align: center;
+	}
+	
+	.headline h2 { margin-bottom: 0; }
+	
+	.headline:before {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		width: 80px;
+		/*border-bottom: 3px solid #ee9f23;*/
+		margin-left: -53px;
+		content: "";
+	}
+	
+	.headline:after {
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		display: block;
+		width: 20px;
+	/*	border-bottom: 3px solid #ffd694;*/
+		margin-right: -52px;
+		content: "";
+	}
+	
+	.headline-2 {
+		position: relative;
+		padding-bottom: 10px;
+		margin-bottom: 50px;
+	}
+	
+	.headline-2 h2 { margin-bottom: 0; }
+	
+	.headline-2:before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 80px;
+		border-bottom: 3px solid #ee9f23;
+		content: "";
+	}
+	
+	.headline-2:after {
+		position: absolute;
+		bottom: 0;
+		left: 85px;
+		display: block;
+		width: 20px;
+		border-bottom: 3px solid #ffd694;
+		content: "";
+	}
+	
+	h1.error-page {
+		color: #ffd694;
+		font-size: 340px;
+		line-height: 220px;
+	}
+	
+	h2.error-page {
+		width: 245px;
+		height: 245px;
+		border-radius: 50%;
+		margin: 0 auto 20px;
+		background-color: #f9b125;
+		color: #fff;
+		font-size: 72px;
+		line-height: 245px;
+		text-align: center;
+	}
+	
+	h3.error-page {
+		display: inline-block;
+		padding: 15px 45px;
+		margin: 50px 0 100px 0;
+		background-color: #464646;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		h1.error-page {
+			font-size: 280px;
+			line-height: 185px;
+		}
+		
+		h2.error-page {
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		h1.error-page {
+			margin-bottom: 50px;
+			font-size: 280px;
+			line-height: 185px;
+			text-align: center;
+		}
+		
+		h2.error-page {
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Icon Boxes
+   ========================================================================== */
+
+/* =Icon Box 1
+   ========================================================================== */
+   
+	.icon-box-1 { 
+		position: relative; 
+		margin-bottom: 50px;
+	}
+		
+	.icon-box-1 > i { 
+		display: block;
+		margin-bottom: 30px; 
+		color: #f9b125; 
+		font-size: 32px;
+		-webkit-transition: color 0.3s;
+				transition: color 0.3s;
+	}
+	
+	.icon-box-1 h5 {
+		position: relative;
+		padding-bottom: 20px;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+	}
+	
+	.icon-box-1 h5:before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 80px;
+		border-bottom: 3px solid #ee9f23;
+		content: "";
+	}
+	
+	.icon-box-1 h5:after {
+		position: absolute;
+		bottom: 0;
+		left: 85px;
+		display: block;
+		width: 20px;
+		border-bottom: 3px solid #f9b125;
+		content: "";
+	}
+	
+	.icon-box-1 h5 a { color: #222; }
+	
+	.icon-box-1 h5 a:hover { 
+		color: #f9b125;
+		text-decoration: none;
+	}
+	
+	.icon-box-1 .icon-box-content {}
+	
+	.icon-box-1:hover > i { color: #222; }
+
+/* =Icon Box 2
+   ========================================================================== */
+   
+	.icon-box-2 { 
+		position: relative; 
+		margin-bottom: 50px;
+		text-align: center; 
+	}
+		
+	.icon-box-2 > i { 
+		display: block;
+		margin-bottom: 30px; 
+		color: #f9b125; 
+		font-size: 32px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.icon-box-2 h5 {
+		margin-bottom: 25px;
+		text-transform: uppercase;
+	}
+	
+	.icon-box-2 h5 a { color: #222; }
+	
+	.icon-box-2 h5 a:hover { 
+		color: #f9b125;
+		text-decoration: none;
+	}
+	
+	.icon-box-2 .icon-box-content {}
+	
+	.icon-box-2:hover > i {
+		-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+				transform: scale(1.2); 
+	}
+
+/* =Icon Box 3
+   ========================================================================== */
+   
+	.icon-box-3 { 
+		position: relative; 
+		margin-bottom: 60px; 
+	}	
+	
+	.icon-box-3 > i { 
+		float: left;
+		margin-right: 20px;
+		color: #f9b125; 
+		font-size: 32px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 
+	} 
+	
+	.icon-box-3 h5 {
+		padding-top: 10px;
+		margin-bottom: 15px;
+		text-transform: uppercase; 
+	}
+	
+	.icon-box-3 h5 a { color: #222; }
+	
+	.icon-box-3 h5 a:hover { 
+		color: #f9b125;
+		text-decoration: none;
+	}
+	
+	.icon-box-3 .icon-box-content {}
+	
+	.icon-box-3:hover > i { 
+		color: #222;
+		-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+				transform: scale(1.2); 
+	}
+
+/* =Icon Box 4
+   ========================================================================== */
+   
+	.icon-box-4 { 
+		position: relative; 
+		margin-bottom: 60px;
+	}	
+	
+	.icon-box-4 > i { 
+		float: right;
+		margin-left: 20px;
+		color: #f9b125; 
+		font-size: 32px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 
+	} 
+	
+	.icon-box-4 h5 {
+		padding-top: 10px;
+		margin-bottom: 15px;
+		text-align: right;
+		text-transform: uppercase; 
+	}
+	
+	.icon-box-4 h5 a { color: #222; }
+	
+	.icon-box-4 h5 a:hover { 
+		color: #f9b125;
+		text-decoration: none;
+	}
+	
+	.icon-box-4 .icon-box-content {}
+	
+	.icon-box-4:hover > i { 
+		color: #222;
+		-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+				transform: scale(1.2); 
+	}
+	
+/* ==========================================================================
+   =Image Box
+   ========================================================================== */
+
+	.image-box { margin-bottom: 30px; }
+	
+	.image-box-img { margin-bottom: 40px; }
+	
+	.image-box-img  img {
+		display: block;
+		width: 100%;
+	}
+	
+	.image-box > *:last-child { margin-bottom: 0; }
+	
+/* ==========================================================================
+   =Info box
+   ========================================================================== */
+   	
+	.info-box {
+		position: relative;
+		overflow: hidden;
+		padding: 110px 0 60px 0;
+		margin-top: 80px;
+		background-color: #f7f7f7;
+	}
+	
+	.info-box-bg-left-right { margin-bottom: 100px; }
+	
+	.info-box-img {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+	}
+	
+	.info-box-img-left, 
+	.info-box-img-right {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		width: 25%;
+		height: 100%;
+	}
+	
+	.info-box-bg-left .info-box-img { 	
+		left: 0;
+		background: no-repeat center right;
+	}
+	
+	.info-box-bg-right .info-box-img { 
+		right: 0;
+		background: no-repeat center left;
+	}
+	
+	.info-box-img-left { 
+		left: 0;
+		background: no-repeat center right;
+	} 
+	
+	.info-box-img-right { 
+		right: 0;
+		background: no-repeat center left;
+	}
+	
+	.info-box-img-left img,
+	.info-box-img-right img,
+	.info-box-img img { display: none; }
+	
+	@media (max-width: 767px) {
+		
+		.info-box-img-left, 
+		.info-box-img-right,
+		.info-box-img {
+			position: relative;
+			width: 100%;
+			background: none !important;		 
+		}
+		
+		.info-box-img-left img,
+		.info-box-img-right img,
+		.info-box-img img {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		
+	}
+   
+/* ==========================================================================
+   =Milestones
+   ========================================================================== */
+
+	.milestone {
+		position: relative;
+		margin-bottom: 30px;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.milestone:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	.milestone i {
+		z-index: 2;
+		margin-right: 10px;
+		font-size: 32px;
+	}
+	
+	.milestone .milestone-content {
+		z-index: 1;
+		font-size: 40px;
+		font-weight: 700;
+	}
+	
+	.milestone .milestone-description {
+		position: relative;
+		padding-bottom: 15px;
+		margin-bottom: 45px;
+		font-size: 18px; 
+		line-height: 34px;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	
+	.milestone .milestone-description:before {
+		/* border-bottom: 3px solid #ee9f23;*/
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 81px;
+    position: absolute;
+    width: 102px;
+	}
+	
+	.milestone .milestone-description:after {
+		/*border-bottom: 3px solid #f9b125;*/
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 185px;
+    position: absolute;
+    width: 20px;
+	}
+
+/* ==========================================================================
+   =Modal window
+   ========================================================================== */	
+   
+	.white-popup {
+		position: relative;
+		width: auto;
+		max-width: 500px;
+		padding: 20px;
+		margin: 20px auto;
+		background: #fff;
+	}
+	
+/* ==========================================================================
+   =Our Process
+   ========================================================================== */
+
+/* =Horizontal process
+   ========================================================================== */
+
+	.horizontal-process-builder { 
+		position: relative;
+		margin-bottom: 50px;
+		list-style: none;
+		text-align: center; 
+	}
+	
+	.horizontal-process-builder:before {
+		position: absolute;
+		z-index: 1;
+		top: 65px;
+		left: 130px;
+		display: block;
+		width: 75%;
+		border-top: 2px solid #222;
+		content: "";
+	}
+	
+	.horizontal-process-builder li { 
+		float: left;
+		width: 25%;  
+	}
+	
+	.horizontal-process-builder li i,
+	.horizontal-process-builder li h1, 
+	.horizontal-process-builder li img {
+		position: relative;
+		z-index: 2;
+		display: block;
+		width: 130px; 
+		height: 130px;
+		overflow: hidden;  
+		border-radius: 50%;
+		margin: 0 auto 35px;
+		outline: 20px solid #fff;
+		background-color: #222;
+		background-clip: padding-box;
+		color: #fff;
+		font-size: 48px; 
+		line-height: 130px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 
+	}
+	
+	.horizontal-process-builder li:hover i,
+	.horizontal-process-builder li:hover h1 { background-color: #f9b125; }
+
+	.horizontal-process-builder.three-items li { width: 33.3333333333%; }
+	.horizontal-process-builder.four-items li { width: 25%; }
+	.horizontal-process-builder.five-items li { width: 20%; }
+	
+	.process-description {
+		font-size: 18px;
+		font-weight: 800;
+		text-transform: uppercase;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 
+	}
+	
+	.horizontal-process-builder li:hover .process-description { color: #f9b125; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.horizontal-process-builder:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.horizontal-process-builder li { 
+			float: none;
+			width: 100%;
+			margin-bottom: 40px; 
+		}
+		
+		.horizontal-process-builder:before { content: none; }
+		
+		.horizontal-process-builder.three-items li { width: 100%; }
+		.horizontal-process-builder.four-items li { width: 100%; }
+		.horizontal-process-builder.five-items li { width: 100%; }
+		
+	}
+	
+/* =Vertical process
+   ========================================================================== */
+
+	.vertical-process-builder {
+		position: relative;
+		margin: 50px 0;
+		list-style: none;
+	}
+	
+	.vertical-process-builder li {
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: 15px;
+	}
+	
+	.vertical-process-builder li:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 20px;
+		height: 20px;
+		border: 2px solid #f9b125;
+		border-radius: 50%;
+		content: "";
+	}
+	
+	.vertical-process-builder li:after {
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #f9b125;
+		content: "";
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.vertical-process-description { 
+		position: relative;
+		padding-bottom: 10px;
+	}
+	
+	.vertical-process-description:before {
+		position: absolute;
+		top: 35px;
+		bottom: 0;
+		left: -49px;
+		display: block;
+		border-left: 2px solid #f9b125;
+		content: "";
+	}
+	
+	.vertical-process-description:after {
+		position: absolute;
+		bottom: -10px;
+		left: -53.5px;
+		color: #f9b125;
+		font-family: "FontAwesome"; 
+		font-size: 12px;
+		content: "\f078";
+	}
+	
+	.vertical-process-description h5 { color: #f9b125; }
+	
+	.vertical-process-builder li:last-child .vertical-process-description:before,
+	.vertical-process-builder li:last-child .vertical-process-description:after { display: none; }
+	
+	.vertical-process-description > *:last-child { margin-bottom: 0; }
+	
+	.vertical-process-builder li:hover:after {
+		top: 0;
+		left: 0;
+		padding: 7px;
+	}
+
+/* ==========================================================================
+   =Pie charts
+   ========================================================================== */
+
+	.pie-chart {
+		position: relative;	
+		margin: 0 auto 30px;
+		text-align: center;
+	}
+	
+	.pie-chart canvas {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	
+	.pie-chart i, 
+	.pie-chart .pie-chart-custom-text, 
+	.pie-chart .pie-chart-percent {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.pie-chart img {
+		max-width:100%;
+		vertical-align: middle;
+	}
+	
+	.pie-chart .pie-chart-custom-text {
+		font-size: 18px;
+	}
+	
+	.pie-chart .pie-chart-percent {
+		font-size: 30px;
+	}
+	
+	.pie-chart-description {
+		display: block;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-weight: 800;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+/* ==========================================================================
+   =Pricing Tables
+   ========================================================================== */
+
+	.pricing-table {
+		overflow: hidden;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 30px 20px 30px;
+		border: 2px solid #ccc;
+		margin-bottom: 30px;
+		text-align: center;
+		-webkit-transition: border-color 0.3s;
+				transition: border-color 0.3s;
+	}
+
+	.pricing-table-header {}
+
+	.pricing-table-header h1 {
+		display: inline-block;
+		padding: 30px 20px 20px 20px;
+		margin-top: -80px;
+		background-color: #ee9f23;
+		color: #fff;
+		font-size: 72px;
+		line-height: 40px;
+		font-weight: 400;
+		letter-spacing: -0.75px;
+		text-align: center;
+	}
+	
+	.pricing-table-header h1 sub {
+		margin-left: -45px;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+	.pricing-table-header h1 small {
+		margin-right: -20px;
+		font-size: 36px;
+	}
+	
+	.pricing-table-header h1 sup {
+		margin-left: -20px;
+		font-size: 24px;
+		letter-spacing: 1px;
+		vertical-align: text-top;
+	}
+
+	.pricing-table-header h4 {
+		padding: 30px 0 110px 0;
+		margin: 0 -30px;
+		background-color: #ccc;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+		
+	.pricing-table-offer { margin-bottom: 40px; }
+	
+	.pricing-table-offer ul { list-style: none; }
+	
+	.pricing-table-offer ul li { 
+		padding: 12px 0;
+		border-bottom: 2px solid #ccc;
+		letter-spacing: 1px; 
+	}
+	
+	.pricing-table-offer ul li:last-child { 
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	
+	.pricing-table:hover { border-color: #f9b125; }
+	.pricing-table:hover .pricing-table-header h4 { background-color: #f9b125; }
+
+/* ==========================================================================
+   =Progress Bar
+   ========================================================================== */
+
+	.progress-bar-description {
+		display: inline-block;
+		padding: 10px 20px;
+		margin-bottom: 15px;
+		background-color: #f9b125;
+		color: #fff;
+		font-weight: 800;
+		letter-spacing: 1px;
+		text-transform: uppercase;		
+	}
+	
+	.progress-percentage {
+		position: absolute;
+		top: -40px;
+		right: 0;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	
+	.progress-bar {
+		position: relative;
+		display: block;
+		height: 7px;
+		margin-bottom: 15px;
+		background-color: #222;
+	}
+	
+	.progress-bar .progress-bar-outer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #f9b125;
+	}
+	
+	.progress-bar .progress-bar-outer .progress-bar-inner {
+		position: absolute;
+		z-index: 1;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
+/* ==========================================================================
+   =Revolution Slider
+   ========================================================================== */
+   
+/* =Rev Slider Basics
+   ========================================================================== */   
+   
+	.fullwidthbanner-container {
+		position: relative;
+		overflow: hidden;
+		width: 100% !important;
+		padding: 0;
+		margin: 0; 
+	}
+
+	.fullwidthbanner-container ul { list-style: none; }
+
+	.fullwidthbanner-container .fullwidthbanner {
+		position: relative;
+		width: 100% !important;
+	}
+	
+	/**
+ 	 * 1. We apply the max-height using an extra class to make the transition to WP more easy
+	 *    If we apply the max-heigh directly to .fullwidthbanner-container, in WP, it would overwrite the height setting you make in the plugin
+ 	 */
+	
+	.slider-revolution.fullwidthbanner-container {
+		
+		margin-bottom: 0px; 
+	}
+
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {
+	
+	}
+
+/* =Rev Slider Pager
+   ========================================================================== */
+
+   /**
+ 	 * 1. changing the z-index from 1000 so that the bullets don't go over the sticky menu
+ 	 */
+   
+	.tp-bullets { 
+		z-index: 100; /* 1 */
+	}
+	   
+	.tp-bullets.simplebullets.round .bullet {
+		width: 6px;
+		height: 6px;
+		border: 1px solid #222;
+		border-radius: 50px;
+		margin: 0 3px;
+		background: transparent;
+	}
+
+	.tp-bullets.simplebullets.round .bullet:hover,
+	.tp-bullets.simplebullets.round .bullet.selected { background: #222; }
+
+/* =Rev Slider navigation
+   ========================================================================== */
+
+	.tp-leftarrow.default,
+	.tp-rightarrow.default {
+		width: 60px;
+		height: 60px;
+		opacity: 0.5;
+	}
+
+	.tp-leftarrow.default:hover,
+	.tp-rightarrow.default:hover { opacity: 1; }
+
+	.tp-leftarrow.default { background: url(../images/left.png) no-repeat center center; }
+	.tp-rightarrow.default { background: url(../images/right.png) no-repeat center center; }
+	
+/* =Rev Slider Typography
+   ========================================================================== */
+   
+   	.caption.title {
+		color: #fff;
+		font-size: 48px;
+		line-height: 60px;
+		font-weight: 600;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		text-shadow: 2px 2px #888;
+	}
+	
+	.caption.subtitle {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 600;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+	.caption.subtitle-bg {
+		max-width: 100% !important;
+		border-top: 10px solid #f9b125;
+		padding: 20px 40px 30px 40px;
+		background-color: #ee9f23;
+		color: #fff;
+		font-size: 30px;
+		font-weight: 600;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+	.caption.text {
+		max-width: 100% !important;
+		color: #fff;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	
+	.caption.text-bg {
+		padding: 30px 40px 20px 40px;
+		background-color: rgba(255, 255, 255, 0.85);
+		color: #222;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		text-align: center;
+	}
+	
+	.caption .btn:hover { color: #fff; }
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.caption .btn {
+			padding: 8px 15px 8px 30px;
+			font-size: 10px;
+		}
+		
+		.caption .btn:before {
+			border-top-width: 17px; 
+			border-bottom-width: 17px;
+			border-left-width: 25px;
+		}
+		
+	}
+
+	@media (max-width: 767px) {
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.tp-bullets { bottom: 0 !important; }
+		
+		.caption .btn {
+			padding: 0 5px 0 15px;
+			font-size: 5px;
+			line-height: 16px;
+		}
+		
+		.caption .btn:before {
+			border-top-width: 8px; 
+			border-bottom-width: 8px;
+			border-left-width: 12px;
+		}
+		
+		.caption.text-bg { 
+			background-color: transparent;
+			color: #fff;
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Social Media
+   ========================================================================== */
+
+	a.social-icon {
+		display: inline-block;
+		margin-right: 20px;
+		margin-bottom: 1px;
+		color: #fff;
+		padding:5px 5px 0px;
+		text-align: center;
+	}
+
+	a.social-icon:last-child { margin-right: 0; }
+
+	a.social-icon i { font-size: 25px; }
+	
+	a.social-icon:hover { text-decoration: none; }
+	
+	a.facebook-icon:hover { color: #0e59a0 !important; background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px; }
+	a.twitter-icon:hover { color: #0ea4ff !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.dribble-icon:hover { color: #ea73a0 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.pinterest-icon:hover { color: #d73532 !important; background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px; }
+	a.googleplus-icon:hover { color:#CC3300 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.tumblr-icon:hover { color: #586980 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.instagram-icon:hover { color: #82685a !important; background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px; }
+	a.rss-icon:hover { color: #f79638 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.linkedin-icon:hover { color: #018faf !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.skype-icon:hover { color: #00b0f6 !important; background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px; }
+	a.flickr-icon:hover { color: #0061db !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.vimeo-icon:hover { color: #63879c !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.github-icon:hover { color: #3b3b3b !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.youtube-icon:hover { color: #cc181e !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.windows-icon:hover { color: #6dc2e9 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.dropbox-icon:hover { color: #007ee5 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.xing-icon:hover { color: #026566 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}	
+	a.adn-icon:hover { color: #1ea076 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.android-icon:hover { color: #98cb02 !important;  background-color:#FFFFFF; padding:5px 5px 0px; border-radius:4px;}
+	a.apple-icon:hover { color: #000000 !important; }
+	a.behance-icon:hover { color: #2d9ad2 !important; }
+	a.bitbucket-icon:hover { color: #214f81 !important; }
+	a.bitcoin-icon:hover { color: #f7931b !important; }
+	a.codepan-icon:hover { color: #000000 !important; }
+	a.css3-icon:hover { color: #3289ce !important; }
+	a.delicious-icon:hover { color: #3399fe !important; }
+	a.deviantart-icon:hover { color: #c8da30 !important; }
+	a.digg-icon:hover { color: #0080c2 !important; }
+	a.drupal-icon:hover { color: #0077b9 !important; }
+	a.empire-icon:hover { color: #000000 !important; }
+	a.foursquare-icon:hover { color: #daecb0 !important; }
+	a.git-icon:hover { color: #f34f29 !important; }
+	a.gitti-icon:hover { color: #634c3e !important; }
+	a.hacker-news-icon:hover { color: #f18642 !important; }
+	a.html5-icon:hover { color: #e54c1f !important; }
+	a.joomla-icon:hover { color: #016fb9 !important; }
+	a.jsfiddle-icon:hover { color: #4679a4 !important; }
+	a.linux-icon:hover { color: #fece0e !important; }
+	a.maxcdn-icon:hover { color: #f36f20 !important; }
+	a.openid-icon:hover { color: #fe6101 !important; }
+	a.pagelines-icon:hover { color: #3783e3 !important; }
+	a.pied-piper-icon:hover { color: #0c7b48 !important; }
+	a.qq-icon:hover { color: #23286c !important; }
+	a.rebel-icon:hover { color: #000000 !important; }
+	a.reddit-icon:hover { color: #cee3f8 !important; }
+	a.renren-icon:hover { color: #0d81e4 !important; }
+	a.share-icon:hover { color: #252525 !important; }
+	a.slack-icon:hover { color: #453744 !important; }
+	a.soundcloud-icon:hover { color: #fe4e00 !important; }
+	a.spotify-icon:hover { color: #80bb41 !important; }
+	a.stack-exchange-icon:hover { color: #265a93 !important; }
+	a.stackoverflow-icon:hover { color: #fea501 !important; }
+	a.steam-icon:hover { color: #191919 !important; }
+	a.stumbleupon-icon:hover { color: #f04f23 !important; }
+	a.tencent-weibo-icon:hover { color: #0063a7 !important; }
+	a.trello-icon:hover { color: #226784 !important; }
+	a.vine-icon:hover { color: #00b081 !important; }
+	a.vk-icon:hover { color: #50769d !important; }
+	a.wechat-icon:hover { color: #a4dc31 !important; }
+	a.weibo-icon:hover { color: #d82828 !important; }
+	a.wordpress-icon:hover { color: #454442 !important; }
+	a.yahoo-icon:hover { color: #4b04a8 !important; }
+
+/* ==========================================================================
+   =Tabs
+   ========================================================================== */
+
+/* =Horizontal tabs
+   ========================================================================== */
+		
+   /*
+    *  1. Wraps around a horizontal tab group
+	*/
+   
+	.tabs-container { margin-bottom: 40px; } /* 1 */
+
+	.tabs-container .tabs-menu { 
+		border-bottom: 1px solid #e6e6e6;
+		margin-top: 10px; 
+		margin-bottom: 0;
+		list-style: none; 
+	}
+	
+	.tabs-container .tabs-menu li { display: inline; }
+	
+	.tabs-container .tabs-menu li a { 
+		float: left; 
+		display: block;
+		padding: 10px 20px; 
+		border: 1px solid #e6e6e6;
+		border-left: none;		
+		margin-bottom: -1px; 
+		color: #222;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.tabs-container .tabs-menu li a:hover { text-decoration: none; }
+	
+	.tabs-container .tabs-menu li:first-child a { border-left: 1px solid #e6e6e6; }
+	
+	.tabs-container .tabs-menu li a:hover,
+	.tabs-container .tabs-menu li.active a {
+		border-bottom-color: #fff; 
+		background-color: #f9b125;
+		color: #fff; 
+	}
+	
+	.tabs-container .tabs {
+		border: 1px solid #e6e6e6; 
+		border-top: none;   
+		margin-bottom: 30px;
+	}
+	
+	.tabs-container .tab-content { padding: 25px; }
+	
+	.tabs-container .tab-content > *:last-child { margin-bottom: 0; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.tabs-container .tabs-menu:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+/* =Vertical tabs
+   ========================================================================== */
+	
+	.vertical-tabs-container {
+		position: relative;
+		margin-bottom: 40px;
+	}
+	
+	.vertical-tabs-container .tabs-menu { 
+		float: left;
+		width: 180px;
+		margin-bottom: 0;
+		list-style: none;
+	}
+	
+	.vertical-tabs-container .tabs-menu li a { 
+		display: block;
+		padding: 15px 25px; 
+		color: #222;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.vertical-tabs-container .tabs-menu li a:hover,
+	.vertical-tabs-container .tabs-menu li.active a {
+		background-color: #f9b125;
+		color: #fff;
+	}
+	
+	.vertical-tabs-container .tabs { 
+		border-left: 1px solid #e6e6e6;
+		margin-left: 180px;
+	}
+	
+	.vertical-tabs-container .tab-content { padding: 58px 25px 58px 50px; }
+	
+	.vertical-tabs-container .tab-content *:last-child { margin-bottom: 0; }
+	
+	@media (max-width: 767px) {
+	
+		.tabs-container .tabs-menu { border-bottom: none; }
+		
+		.tabs-container .tabs-menu li { display: block; }
+	
+		.tabs-container .tabs-menu li a { 
+			float: none; 
+			display: block;
+			padding: 20px 25px;
+			border: 1px solid #e6e6e6;
+			border-top: none;
+			margin: 0;
+		}
+		
+		.tabs-container .tabs-menu li a:hover { text-decoration: none; }
+		
+		.tabs-container .tabs-menu li:first-child a { border-top: 1px solid #e6e6e6; }
+		
+		.tabs-container .tabs-menu li.active a {  
+			padding: 20px 25px;
+			border-bottom-color: #bbb;
+			margin: 0;
+			background-color: #fff;
+			color: #222; 
+		}
+		
+		.vertical-tabs-container .tabs-menu { 
+			float: none;
+			width: 100%;
+			border: 1px solid #e6e6e6;
+			border-bottom: none;
+		}
+		
+		.vertical-tabs-container .tabs-menu li a { border-bottom: 1px solid #e6e6e6; }
+		.vertical-tabs-container .tabs-menu li:last-child a { border-bottom: none; }
+		
+		.vertical-tabs-container .tabs {
+			border: 1px solid #e6e6e6;
+			margin-left: 0; 
+		}
+		
+		.vertical-tabs-container .tab-content { padding: 25px; }
+		
+		.vertical-tabs-container .tabs-menu li a { 
+			padding: 20px 25px;
+			border-right: none;
+			margin-right: 0;
+		}
+
+		.vertical-tabs-container .tabs-menu li.active a { border-bottom-color: #bbb; }		
+	  
+	}
+	
+/* ==========================================================================
+   =Testimonials
+   ========================================================================== */
+
+	.testimonial { 
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	.testimonial:before {
+		display: block;
+		width: 55px;
+		height: 55px;
+		margin: 0 auto 50px auto;
+		background-color: #f9b125;
+		color: #fff;
+		font-size: 36px;
+		line-height: 70px;
+		letter-spacing: 1px;
+		
+	}
+	
+	.testimonial blockquote {
+		padding-left: 0;
+		border-left: none;
+		margin-bottom: 30px; 
+	}
+	
+	.testimonial blockquote p {}
+	
+	.testimonial h5 { 
+		color: #f9b125;
+		letter-spacing: 1px;
+	}
+	
+	.testimonial h6 { 
+		font-weight: 600;
+		letter-spacing: 2px;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.testimonial:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+/* ==========================================================================
+   =Team Member
+   ========================================================================== */
+
+	.team-member {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	.team-member-img {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		max-width: 100%;
+		border-radius: 50%;
+		margin-bottom: 40px;
+	}
+	
+	.team-member-img:after {
+		position: absolute;
+		bottom: -50%;
+		left: 0;
+		right: 0;
+		height: 50%;
+		background-color: #f9b125;
+		content: "";
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.team-member img {}
+	
+	.team-member h5 { 
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	
+	.team-member p {
+		margin-bottom: 10px;
+		color: #888; 
+	}
+	
+	.team-member .social-media { margin-bottom: 40px; }
+	
+	.team-member:hover .team-member-img:after { bottom: 0; }
+	
+/* ==========================================================================
+   =Portfolio Item
+   ========================================================================== */
+	
+	.portfolio-item { 
+		position: relative; 
+		margin-bottom: 30px;
+	}
+	
+	.portfolio-item-preview { position: relative; }
+	
+	.portfolio-item-preview > img {
+		display: block;
+		width: 100%;
+	}
+	
+	.portfolio-item-overlay {
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0; 
+		background-color: rgba(0, 0, 0, 0.7);
+		opacity: 0;
+		-webkit-transition: opacity 0.3s;
+				transition: opacity 0.3s;
+	}
+	
+	.portfolio-item-overlay:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: 35px;
+		opacity: 0;
+		background-color: #f9b125;
+		content: "";
+		-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+				transform: scale(0);
+		-webkit-transition: all 0.3s 0.1s;
+				transition: all 0.3s 0.1s;
+	}
+		
+	.portfolio-item-overlay-actions {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		margin-top: -30px;
+		text-align: center;
+		opacity: 0;
+		-webkit-transition: all 0.3s 0.2s;
+				transition: all 0.3s 0.2s;
+	}
+	
+	.portfolio-item-overlay-actions .portfolio-item-zoom {
+		display: inline-block;
+		padding: 10px;
+		text-decoration: none; 
+	}
+	
+	.portfolio-item-overlay-actions .portfolio-item-zoom i {
+		color: #fff; 
+		font-size: 32px;  
+	}
+	
+	.portfolio-item-description > *:last-child { margin-bottom: 0; }
+	
+	.portfolio-item-overlay .portfolio-item-description {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin: 0 35px;
+		color: #fff;
+		text-align: center;
+		opacity: 0;
+		-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+		-webkit-transition: all 0.3s 0.2s;
+				transition: all 0.3s 0.2s;
+	}
+	
+	.portfolio-item-overlay .portfolio-item-description h3 {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	
+	.portfolio-item-overlay .portfolio-item-description h3,
+	.portfolio-item-overlay .portfolio-item-description a { color: #fff; }
+	
+	.portfolio-item-overlay .portfolio-item-description a:hover { 
+		color: #222;
+		text-decoration: none;
+	}
+	
+	.portfolio-item-preview + .portfolio-item-description { margin: 30px 0; }
+	
+	.portfolio-item-description h5 {
+		margin-bottom: 5px;
+		color: #f9b125;
+	}
+	
+	.portfolio-item-description h5 a {
+		color: #222;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	
+	.portfolio-item-description h5 a:hover {
+		color: #f9b125;
+		text-decoration: none;
+	}
+	
+	.portfolio-item:hover .portfolio-item-overlay { opacity: 1; }	
+	
+	.portfolio-item:hover .portfolio-item-overlay:before { 
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+				transform: scale(1);
+	}
+	
+	.portfolio-item:hover .portfolio-item-overlay .portfolio-item-description { opacity: 1; }
+	
+	.portfolio-item:hover .portfolio-item-overlay-actions { opacity: 1; }
+	
+/* ==========================================================================
+   =Portfolio Filter
+   ========================================================================== */
+	
+	.portfolio-filter ul {
+		margin-bottom: 100px;
+		list-style: none;
+		text-align: center;
+	}
+	
+	.portfolio-filter ul li { 
+		display: inline-block;
+		margin-right: 10px;
+	}
+	
+	.portfolio-filter ul li:last-child { margin-right: 0; }
+	
+	.portfolio-filter ul li a {
+		display: inline-block;
+		padding: 10px 20px;
+		color: #222;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-filter ul li a:hover,
+	.portfolio-filter ul li a.active { 
+		background-color: #f9b125;
+		color: #fff;
+	}	
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-filter ul li { 
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		.portfolio-filter ul li:last-child { margin-bottom: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Portfolio Pagination
+   ========================================================================== */
+	
+	.portfolio-pagination { margin-bottom: 50px; }
+
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-pagination:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}	
+	
+	.portfolio-pagination .nav-links {}
+
+	.portfolio-pagination .page-numbers {
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		border: 2px solid #f9b125;
+		margin-right: 5px;
+		font-size: 14px;
+		line-height: 36px;
+		font-weight: 700;
+		text-align: center;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-pagination .page-numbers:last-child { margin-right: 0; }
+
+	.portfolio-pagination .page-numbers:hover,
+	.portfolio-pagination .page-numbers.current {
+		background-color: #f9b125;
+		color: #fff;
+	}
+
+	.portfolio-pagination .current {}
+	
+	.portfolio-pagination .page-numbers.dots { border: none; }
+	
+	.portfolio-pagination .page-numbers.dots:hover {
+		background-color: transparent;
+		color: #f9b125;
+	}
+
+	.portfolio-pagination .prev,
+	.portfolio-pagination .next {}
+
+	.portfolio-pagination .prev:before,
+	.portfolio-pagination .next:before { font-family: "FontAwesome"; }
+
+	.portfolio-pagination .prev:hover,
+	.portfolio-pagination .prev:focus,
+	.portfolio-pagination .next:hover,
+	.portfolio-pagination .next:focus {}
+
+	.portfolio-pagination .prev {}
+
+	.portfolio-pagination .prev:before { content: "\f104"; }
+
+	.portfolio-pagination .next {}
+
+	.portfolio-pagination .next:before { content: "\f105"; }
+	
+/* ==========================================================================
+   =Portfolio Grid
+   ========================================================================== */
+
+   .portfolio-grid {
+		margin-bottom: 100px;
+		list-style: none;
+	}
+	
+	.portfolio-grid.gutter { margin: -15px -15px 85px -15px; }
+	
+	.portfolio-grid .item {
+		float: left;
+		width: 33.33333%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	.portfolio-grid.gutter .item { padding: 15px; }
+	
+	.portfolio-grid.gutter .portfolio-item-preview + .portfolio-item-description { margin-bottom: 0; }
+	
+	.portfolio-grid .portfolio-item { margin-bottom: 0; }
+	
+	.portfolio-grid.three-cols .item { width: 33.33333%; } 
+	.portfolio-grid.four-cols .item { width: 33.33333%; } 
+	.portfolio-grid.five-cols .item { width: 25%; } 
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-grid:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.portfolio-grid.four-cols .item { width: 25%; }
+		.portfolio-grid.five-cols .item { width: 20%; } 
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 50%; } 
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-grid .item {
+			float: none;
+			width: 100%; 
+		}
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 100%; }
+		
+	}
+	
+/* ==========================================================================
+   =Bx Slider
+   ========================================================================== */
+   
+/* =Bx Slider reset
+   ========================================================================== */
+   
+	.bx-wrapper { margin: 0 auto 40px; }
+   
+	.bx-pager,
+	.bx-controls-auto,
+	.bx-controls-direction  { z-index: 100; }
+	
+	.slides { list-style: none; }
+   
+/* =Bx Slider theme
+   ========================================================================== */   
+   
+   .bx-wrapper {		
+		border: none;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+				box-shadow: none;		
+		background: none;
+	}
+
+/* =Bx Slider Pager
+   ========================================================================== */ 
+   
+	.bx-wrapper .bx-pager,
+	.bx-wrapper .bx-controls-auto { bottom: -30px; }
+	
+	.bx-wrapper .bx-pager.bx-default-pager a,
+	.bx-wrapper .bx-pager.bx-default-pager a:focus {
+		width: 6px;
+		height: 6px;
+		border: 1px solid #222;
+		border-radius: 50%;
+		background: transparent;
+	}
+		
+	.bx-wrapper .bx-pager.bx-default-pager a:hover,
+	.bx-wrapper .bx-pager.bx-default-pager a.active {
+		background: #222;
+	}
+	
+/* =Bx Slider Dir Nav
+   ========================================================================== */ 
+   
+	.bx-wrapper .bx-prev {
+		left: 0;
+		background: #222 url(../images/left.png) no-repeat center center;
+	}
+
+	.bx-wrapper .bx-next {
+		right: 0;
+		background: #222 url(../images/right.png) no-repeat center center;
+	}
+	
+	.bx-wrapper .bx-prev:hover, 
+	.bx-wrapper .bx-next:hover { background-position: center center; }
+	
+	/*
+	 * 1. We are changing the original z-index from 9999 to 1000 so that it doesn't overlap other elements that need to be above this one
+	 */
+	.bx-wrapper .bx-controls-direction a {
+		width: 48px;
+		height: 48px;
+		z-index: 1000; /* 1 */	
+	}
+	
+	.slides li img { margin: 0 auto; }
+	
+	#images-slider-2-pager {
+		margin: 0 -10px 30px -10px;
+		text-align: center; 
+	}
+	
+	#images-slider-2-pager a {
+		float: left;
+		display: block;
+		width: 25%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 10px;
+	}
+	
+	#images-slider-2-pager a img { border: 5px solid transparent; }
+	
+	#images-slider-2-pager a.active img,
+	#images-slider-2-pager a:hover img { border-color: #f9b125; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	#images-slider-2-pager:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+
+/* ==========================================================================
+   =Fullwidth Section
+   ========================================================================== */
+   
+   	.fullwidth-section.custom-color-selected {
+		background-color: #000;
+		color: #fff;
+	}
+	
+	.fullwidth-section.custom-color-selected a, 
+	.fullwidth-section.custom-color-selected ul.arrow li:before, 
+	.fullwidth-section.custom-color-selected .icon-box-1:hover > i, 
+	.fullwidth-section.custom-color-selected .icon-box-3:hover > i, 
+	.fullwidth-section.custom-color-selected .icon-box-4:hover > i, 
+	.fullwidth-section.custom-color-selected .tabs-container .tabs-menu li a, 
+	.fullwidth-section.custom-color-selected .vertical-tabs-container .tabs-menu li a { color: inherit; }
+	
+	
+	.fullwidth-section.custom-color-selected .accordion-item:hover,
+	.fullwidth-section.custom-color-selected .accordion-item.active,
+	.fullwidth-section.custom-color-selected .toggle-item:hover,
+	.fullwidth-section.custom-color-selected .toggle-item.active, 
+	.fullwidth-section.custom-color-selected .horizontal-process-builder:before { border-color: inherit; }
+	
+	.fullwidth-section .horizontal-process-builder li i,
+	.fullwidth-section .horizontal-process-builder li h1, 
+	.fullwidth-section .horizontal-process-builder li img { outline: none; }
+	
+	#bg-1 {
+		padding: 70px 0 20px 0;
+		background-color: #f9b125;
+	}
+	
+	#bg-2 {
+		padding-top: 100px;
+		padding-bottom: 0;
+		margin-top: 70px;
+	}
+	
+	#bg-3 {
+		padding: 100px 0 60px 0;
+		margin-top: 70px;
+		margin-bottom: 0;
+	}
+	
+	#bg-4 {
+		padding-bottom: 0;
+		margin-top: 70px;
+		margin-bottom: 0;
+	}
+	
+	#bg-5 { background-color: #f9b125; }
+	
+	#bg-6 {
+		padding: 100px 0 50px 0;
+		margin-top: 100px;
+		background-image: url(../../content/backgrounds/1920x1080-1.jpg);
+	}
+	
+	#bg-7 {
+		padding: 120px 0 100px 0;
+		margin-top: 70px;
+	}
+	
+	#bg-8 {
+		padding: 120px 0 70px 0;
+		margin-top: 70px;
+	}
+	
+	#bg-9 {
+		padding: 100px 0 80px 0;
+		margin-top: 50px;
+		margin-bottom: -50px;
+		background-image: url(../../content/backgrounds/1920x1080-2.jpg); 
+		color: #222;
+	}
+	
+	#bg-10 {
+		padding: 100px 0 50px 0;
+		margin-top: 80px;
+		background-image: url(../../content/backgrounds/1920x1080-3.jpg);
+	}

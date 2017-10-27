@@ -1,0 +1,310 @@
+/**
+ * 	Name: grid.css
+ *
+ *	The grid the template is build on. 
+ *
+ *  T.O.C
+ *
+ *	=Base grid
+ *	=Extra small devices: Phones (< 768px)
+ *		=Portrait and landscape
+ *		=Landscape
+ *	=Small devices: Tablets (>= 768px)
+ *	=Medium devices: Desktops (>= 992px )
+ *	=Large devices: Desktops (>= 1200px )
+ *	=Clearing 
+ *
+ */
+ 
+/* ==========================================================================
+   =Base grid
+   ========================================================================== */
+
+	.container ,
+	.container-fluid {
+		position: relative;
+		margin-right: auto;
+		margin-left: auto;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.container {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.row {
+		position: relative;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	/**
+ 	 * Automatically clear rows
+ 	 */
+	 
+	.row:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}	
+	
+	.span1, 
+	.span2, 
+	.span3, 
+	.span4, 
+	.span5, 
+	.span6, 
+	.span7, 
+	.span8, 
+	.span9, 
+	.span10, 
+	.span11, 
+	.span12 {
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	@media (min-width: 768px) {
+
+		.span1, 
+		.span2, 
+		.span3, 
+		.span4, 
+		.span5, 
+		.span6, 
+		.span7, 
+		.span8, 
+		.span9, 
+		.span10, 
+		.span11, 
+		.span12 {
+			float: left;
+		}
+		
+		.span12 { width: 100%; }
+		.span11 { width: 91.66666667%; }
+		.span10 { width: 83.33333333%; }
+		.span9  { width: 75%; }
+		.span8  { width: 66.66666667%; }
+		.span7  { width: 58.33333333%; }
+		.span6  { width: 50%; }
+		.span5  { width: 41.66666667%; }
+		.span4  { width: 33.33333333%; }
+		.span3  { width: 25%; }
+		.span2  { width: 16.66666667%; }
+		.span1  { width: 8.33333333%;  }
+		
+		.offset12 { margin-left: 100%; }
+		.offset11 { margin-left: 91.66666667%; }
+		.offset10 { margin-left: 83.33333333%; }
+		.offset9  { margin-left: 75%; }
+		.offset8  { margin-left: 66.66666667%; }
+		.offset7  { margin-left: 58.33333333%; }
+		.offset6  { margin-left: 50%; }
+		.offset5  { margin-left: 41.66666667%; }
+		.offset4  { margin-left: 33.33333333%; }
+		.offset3  { margin-left: 25%; }
+		.offset2  { margin-left: 16.66666667%; }
+		.offset1  { margin-left: 8.33333333%; }
+		.offset0  { margin-left: 0%; }
+
+	}
+
+	.visible-phone,
+	.visible-tablet,
+	.visible-desktop,
+	.visible-desktop-large {
+		display: none !important;
+	}
+
+	.visible-phone-block,
+	.visible-phone-inline,
+	.visible-phone-inline-block,
+	.visible-tablet-block,
+	.visible-tablet-inline,
+	.visible-tablet-inline-block,
+	.visible-desktop-block,
+	.visible-desktop-inline,
+	.visible-desktop-inline-block,
+	.visible-desktop-large-block,
+	.visible-desktop-large-inline,
+	.visible-desktop-large-inline-block {
+		display: none !important;
+	}
+		
+/* ==========================================================================
+   =Extra small devices: Phones (< 768px)
+   ========================================================================== */
+
+/* =Portrait and landscape
+   ========================================================================== */
+   
+	@media (max-width: 767px) {
+		
+		.container { width: auto; }
+		
+		.span1, 
+		.span2, 
+		.span3, 
+		.span4, 
+		.span5, 
+		.span6, 
+		.span7, 
+		.span8, 
+		.span9, 
+		.span10, 
+		.span11, 
+		.span12 {
+			width: 100%;
+		}
+		
+		.visible-phone { display: block !important; }
+		
+		table.visible-phone { display: table; }
+		
+		tr.visible-phone { display: table-row !important; }
+		
+		th.visible-phone,
+		td.visible-phone { display: table-cell !important; }
+
+		.visible-phone-block { display: block !important; }
+		
+		.visible-phone-inline { display: inline !important; }
+		
+		.visible-phone-inline-block { display: inline-block !important; }
+
+		.hidden-phone { display: none !important; }
+		
+	}
+	
+/* =Landscape
+   ========================================================================== */
+	
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		
+		
+	}	
+
+/* ==========================================================================
+   =Small devices: Tablets (>= 768px)
+   ========================================================================== */
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.container {	width: 750px; }
+
+		.visible-tablet { display: block !important; }
+		
+		table.visible-tablet { display: table; }
+		
+		tr.visible-tablet { display: table-row !important; }
+		
+		th.visible-tablet,
+		td.visible-tablet { display: table-cell !important; }
+
+		.visible-tablet-block { display: block !important; }
+		
+		.visible-tablet-inline { display: inline !important; }
+		
+		.visible-tablet-inline-block { display: inline-block !important; }
+
+		.hidden-tablet { display: none !important; }
+		
+	}
+	
+/* ==========================================================================
+   =Medium devices: Desktops (>= 992px )
+   ========================================================================== */
+   
+	@media (min-width: 992px) and (max-width: 1199px) {
+		
+		.container { width: 970px; }
+		
+		.visible-desktop { display: block !important; }
+		
+		table.visible-desktop { display: table; }
+		
+		tr.visible-desktop { display: table-row !important; }
+		
+		th.visible-desktop,
+		td.visible-desktop { display: table-cell !important; }
+
+		.visible-desktop-block { display: block !important; }
+		
+		.visible-desktop-inline { display: inline !important; }
+		
+		.visible-desktop-inline-block { display: inline-block !important; }
+
+		.hidden-desktop { display: none !important; }
+		
+	}	
+
+/* ==========================================================================
+   =Large devices: Desktops (>= 1200px )
+   ========================================================================== */
+
+	@media (min-width: 1200px) {
+	
+		.container { width: 1270px; }
+		
+		.visible-desktop-large { display: block !important; }
+		
+		table.visible-desktop-large { display: table; }
+		
+		tr.visible-desktop-large { display: table-row !important; }
+		
+		th.visible-desktop-large,
+		td.visible-desktop-large { display: table-cell !important; }
+
+		.visible-desktop-large-block { display: block !important; }
+		
+		.visible-desktop-large-inline { display: inline !important; }
+		
+		.visible-desktop-large-inline-block { display: inline-block !important; }
+
+		.hidden-desktop-large { display: none !important; }
+		
+	}
+
+/* ==========================================================================
+   =Clearing
+   ========================================================================== */
+
+	/**
+ 	 * ClearFix Hack
+	 * Usage:  add  class="fixed"  to parents of floated elements
+ 	 */
+	 
+	.fixed:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	/**
+ 	 * Clear content
+	 * Usage:  <br class="clear"> 
+ 	 */	
+	 
+	.clear {
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}

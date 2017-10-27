@@ -1,0 +1,926 @@
+/**
+ * 	Name: elements.css 
+ *  
+ *	Styling for all html5 elements
+ *
+ *	T.O.C
+ *
+ *	=Typography
+ *	=Links
+ *	=Lists
+ *		=Custom lists
+ *	=Images
+ *	=Tables
+ *	=Forms
+ *		=Responsive Form Inputs
+ *
+ */
+ 
+/* ==========================================================================
+   =Typography
+   ========================================================================== */
+   	 
+	body {
+		background-color: #fff;
+		color: #222;
+		font: 14px "Open Sans", Arial, sans-serif; 
+		line-height: 25px;
+		letter-spacing: 0.25px;
+	}
+	
+	@media (max-width: 767px) {
+	
+		/**
+		 * 1. Hide background on mobile devices
+		 */
+	 
+		body { 
+			background: none; 	/* 1 */
+			background-color: #fff; 
+		}
+		
+	}	
+
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		font-family: 'Open Sans', Arial, sans-serif;
+		font-weight: 700; 
+	}
+		
+	h1 a, 
+	h2 a, 
+	h3 a, 
+	h4 a, 
+	h5 a, 
+	h6 a { 
+		font-weight: inherit; 
+	}
+	
+	h1 {
+		margin-bottom: 14px; 	 
+		font-size: 28px; 
+		line-height: 50px; 
+	}
+	
+	h2 { 
+		margin-bottom: 10px;	
+		font-size: 22px; 
+		line-height: 40px;  
+	}
+	
+	h3 { 
+		margin-bottom: 8px;
+		font-size: 18px; 
+		line-height: 34px;   
+	}
+	
+	h4 {
+		margin-bottom: 4px; 
+		font-size: 16px; 
+		line-height: 30px;   
+	}
+	
+	h5 { 
+		font-size: 14px; 
+		line-height: 24px; 
+	}
+	
+	h6 { 
+		font-size: 12px; 
+		line-height: 21px; 
+	}
+
+	p { margin-bottom: 20px; }
+	
+	em { font-style: italic; }
+	
+	strong { font-weight: 700; }
+	
+	small { font-size: 90%; }
+	
+	big { font-size: 125%; }
+	
+	sub { 
+		vertical-align: sub; 
+		font-size: 75%; 
+	}
+	
+	sup { 
+		vertical-align: super; 
+		font-size: 75%; 
+	}
+	
+	abbr[title] {  
+		border-bottom: 1px dotted #888; 
+		cursor: help;
+	}
+	
+	address { 
+		display: block; 
+		margin-bottom: 20px; 
+	}
+	
+	blockquote {
+		padding-left: 20px;
+		border-left: 3px solid #f9b125;
+	}
+	
+	blockquote p {
+		font-weight: 600;
+		font-style: italic;
+	}
+	
+	hr { 
+		height: 0; 
+		border: solid #e6e6e6; 
+		border-width: 1px 0 0 0;
+		margin: 30px 0;
+	}
+
+	kbd,
+	tt,
+	var,
+	samp,	
+	code, 
+	pre { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+	
+	code { 
+		padding: 1px 4px;
+		border: 1px solid #e6e6e6;
+		border-radius: 3px;	
+		background-color: #f3f3f3;  
+		color: #ff3225;  
+	}
+	
+	pre { 
+		overflow-x: auto; 
+		display: block;
+		padding: 20px;
+		border: 1px solid #e6e6e6;
+		border-radius: 3px;		
+		margin-bottom: 20px;		
+		background-color: #f3f3f3; 
+		white-space: pre-wrap;
+	}
+	
+	mark,
+	ins {
+		padding: 1px 4px;
+		border: 1px solid #e6e6e6;
+		border-radius: 3px;	
+		background-color: #f3f3f3; 
+		text-decoration: none;
+	}
+	
+	s,
+	del { text-decoration: line-through; }
+	
+	/* Typography Helper Classes */
+	
+	/**
+	 * <div class="hr"></div> acts like an <hr>
+	 */
+	
+	.hr { 
+		border-top: 1px solid #e6e6e6;  
+		margin: 30px 0;
+	}
+	
+	.text-left { text-align: left; }
+	.text-right { text-align: right; }
+	.text-center { text-align: center; }
+	.text-justify { text-align: justify; }
+	
+	.text-uppercase { text-transform: uppercase; }
+	
+	.text-highlight { color: #f9b125; }
+
+	.mute{ color: #888; }
+	
+	.no-margin-bottom,
+	.last { margin-bottom: 0 !important; }
+	
+	@media (max-width: 767px) {
+
+		.last { margin-bottom: 20px !important; }
+		
+		.text-right { text-align: left; }
+
+	}
+
+/* ==========================================================================
+   =Links
+   ========================================================================== */
+	
+	a, 
+	a:visited { 
+		color: #f9b125; 
+		text-decoration: none; 
+	}
+	
+   /**
+	* 1. Remove the gray background color from active links in IE 10.
+	*/
+	
+	a:active {
+ 		background: transparent; /* 1 */
+	}
+	
+	a:active,
+	a:hover, 
+	a:focus {
+		outline: 0; 
+		text-decoration: underline;
+	}	
+	
+/* ==========================================================================
+   =Lists
+   ========================================================================== */
+	
+	ul, 
+	ol { 
+		margin-bottom: 20px;
+		list-style-position: inside; 
+	}
+	 
+	li > ul, 
+	li > ol { 
+		margin-bottom: 0; 
+		margin-left: 30px; 
+	}
+	
+	li {}
+	
+	ul { list-style-type: disc; }
+	ol { list-style-type: decimal; }
+	
+	dl { margin-bottom: 20px; }
+
+	dt { font-weight: bold; }
+
+	dd  { margin-bottom: 20px; }
+	
+	/* List Helper Classes */
+
+	ul.last,
+	ol.last,
+	dl.last { margin-bottom: 0; }
+	
+	@media (max-width: 767px) {
+
+		ul.last, 
+		ol.last { margin-bottom: 20px; }
+		
+	}
+	
+/* =Custom lists
+   ========================================================================== */	
+
+	/**
+ 	 * Custom lists
+ 	 *
+	 * 1. unstyled list
+	 * 2. list with squares for bullets
+	 * 3. list with discs for bullets
+	 *
+	 */
+	 
+	ul.unstyled { list-style-type: none; } /* 1 */
+	ul.square { list-style-type: square; } /* 2 */
+	ul.circle { list-style-type: circle; } /* 3 */
+	
+	/**
+ 	 * FontAwesome lists
+ 	 *
+	 * 1. Arrow list
+	 *
+	 */
+	
+	ul.arrow { list-style: none; }	/* 1 */
+	
+	ul.arrow li:before { 
+		position: relative;
+		top: 2px;
+		width: auto;
+		height: auto;
+		margin-right: 12px;
+		color: #f9b125;
+		font-family: 'FontAwesome';
+		font-size: 16px;
+		font-weight: 400;
+	}
+	
+	ul.arrow li:before { content: "\f054"; }	
+	
+	ul.arrow li { margin-bottom: 10px; }
+	ul.arrow li:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   =Images
+   ========================================================================== */
+	
+	img { 
+		max-width: 100%;
+		height: auto;
+		border: none; 
+		vertical-align: middle;
+	}
+	
+	.round-img { border-radius: 50%; }
+
+/* ==========================================================================
+   =Tables
+   ========================================================================== */
+
+	table,
+	th,
+	td { border: 1px solid #e6e6e6; }
+
+	/**
+	 * 1. Prevents HTML tables from becoming too wide
+	 */
+
+	table {
+		border-collapse: separate;
+		border-spacing: 0;
+		border-width: 1px 0 0 1px;
+		margin-bottom: 20px;
+		table-layout: fixed; 	/* 1 */
+		width: 100%;
+	}
+
+	caption,
+	th,
+	td {
+		font-weight: normal;
+		text-align: left;
+	}
+
+	caption { margin-bottom: 20px; }
+	
+	th {
+		border-width: 0 1px 1px 0;
+		font-weight: 700;
+	}
+
+	td { border-width: 0 1px 1px 0; }
+
+	th, 
+	td { padding: 8px; }
+	
+	@media (max-width: 480px) {
+	
+		/**
+		 * 1. Force table to not be like tables anymore
+		 */
+		 
+		table, 
+		thead, 
+		tbody, 
+		th, 
+		td, 
+		tr { display: block; /* 1 */ }
+
+		/**
+		 * Hide table headers
+		 */
+	
+		th{ 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		td:first-child { border-top: none !important; }
+	  
+	}
+	
+/* ==========================================================================
+   =Forms
+   ========================================================================== */
+
+	form {}
+	
+	fieldset {}
+
+	fieldset legend {
+		padding: 0 10px;
+		margin: 0;
+		margin-left: -2px;
+		background: #fff;
+		font-weight: 700;								
+	}
+	
+	::-moz-placeholder,
+	::-webkit-input-placeholder,
+	:-ms-input-placeholder {
+		color: #888;
+	}
+	
+	label {
+		display: block;
+		margin-bottom: 5px;
+	}
+	
+	/**
+	 * 1. we need to supply the font color for situations when you place the inputs in a div that has color:#fff
+	 *    normally because of the #fff the text in inputs would not be visible but giving the color explicitly here ovrwrites that
+	 */
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	input[type="color"],
+	textarea {
+		display: block;
+		width: 100%;
+		-webkit-appearance: none;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+		padding: 10px 20px;		
+		border: 2px solid #e6e6e6;
+		margin-bottom: 25px;
+		background-color: #fff;
+		color: #222; /* 1 */
+	}
+
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="date"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="month"]:focus,
+	input[type="week"]:focus,
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="time"]:focus,
+	input[type="url"]:focus,
+	input[type="color"]:focus,
+	textarea:focus {
+		border-color: #f9b125;
+		outline: none;
+	}
+
+	input[type="text"]:disabled,
+	input[type="password"]:disabled,
+	input[type="date"]:disabled,
+	input[type="datetime"]:disabled,
+	input[type="datetime-local"]:disabled,
+	input[type="month"]:disabled,
+	input[type="week"]:disabled,
+	input[type="email"]:disabled,
+	input[type="number"]:disabled,
+	input[type="search"]:disabled,
+	input[type="tel"]:disabled,
+	input[type="time"]:disabled,
+	input[type="url"]:disabled,
+	input[type="color"]:disabled,
+	textarea:disabled {
+		background-color: #f3f3f3;
+		cursor: not-allowed;
+	}
+
+	input[type="text"][disabled],
+	input[type="text"][readonly],
+	fieldset[disabled] input[type="text"],
+	input[type="password"][disabled],
+	input[type="password"][readonly],
+	fieldset[disabled] input[type="password"],
+	input[type="date"][disabled],
+	input[type="date"][readonly],
+	fieldset[disabled] input[type="date"],
+	input[type="datetime"][disabled],
+	input[type="datetime"][readonly],
+	fieldset[disabled] input[type="datetime"],
+	input[type="datetime-local"][disabled],
+	input[type="datetime-local"][readonly],
+	fieldset[disabled] input[type="datetime-local"],
+	input[type="month"][disabled],
+	input[type="month"][readonly],
+	fieldset[disabled] input[type="month"],
+	input[type="week"][disabled],
+	input[type="week"][readonly],
+	fieldset[disabled] input[type="week"],
+	input[type="email"][disabled],
+	input[type="email"][readonly],
+	fieldset[disabled] input[type="email"],
+	input[type="number"][disabled],
+	input[type="number"][readonly],
+	fieldset[disabled] input[type="number"],
+	input[type="search"][disabled],
+	input[type="search"][readonly],
+	fieldset[disabled] input[type="search"],
+	input[type="tel"][disabled],
+	input[type="tel"][readonly],
+	fieldset[disabled] input[type="tel"],
+	input[type="time"][disabled],
+	input[type="time"][readonly],
+	fieldset[disabled] input[type="time"],
+	input[type="url"][disabled],
+	input[type="url"][readonly],
+	fieldset[disabled] input[type="url"],
+	input[type="color"][disabled],
+	input[type="color"][readonly],
+	fieldset[disabled] input[type="color"],
+	textarea[disabled],
+	textarea[readonly],
+	fieldset[disabled] textarea {
+		background-color: #f3f3f3;
+		cursor: not-allowed;
+	}
+
+	textarea[rows] { height: auto; }
+
+	/**
+	 *  1. Disallow resize out of parent
+	 */
+	
+	textarea { max-width: 100%; /* 1 */ }
+	
+	/**
+	 * 1. we need to supply the font color for situations when you place the inputs in a div that has color:#fff
+	 *    normally because of the #fff the text in inputs would not be visible but giving the color explicitly here ovrwrites that
+	 */
+	
+	select {
+		padding: 10px 20px;	
+		height: 42px;
+		width: 100%;
+		border: 1px solid #e6e6e6;
+		background-color: #fff;
+		-webkit-appearance: none !important;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+		color: #222; /* 1 */		
+	}
+
+	select:disabled {
+		background-color: #f3f3f3;
+		cursor: not-allowed;
+	}
+	
+	select:focus { border-color: #bbb; }
+
+	select[multiple] { height: auto; }
+
+	input[type="range"] { width: 100%; }
+	
+	input[type="file"],
+	input[type="checkbox"],
+	input[type="radio"],
+	select {
+		margin: 0 0 10px;
+	}
+
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		display: inline-block;
+		margin-right: 10px;
+		margin-bottom: 0;
+		margin-left: 5px;
+		vertical-align: baseline;
+	}
+
+	input[type="file"] { width: 100%; }
+	
+	button,
+	input[type="reset"],
+	input[type="submit"],
+	input[type="button"] {
+		position: relative;
+		display: inline-block;
+		padding: 12px 25px;  
+		border: 1px solid #f9b125;
+		background-color: #f9b125;
+		-webkit-background-clip: padding-box;
+		   -moz-background-clip: padding-box;
+				background-clip: padding-box;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+	
+	input[type="reset"]:hover,
+	input[type="submit"]:hover,
+	input[type="button"]:hover { background-color: #ee9f23; }
+	
+/* =Responsive Form Inputs
+   ========================================================================== */
+	
+	/**
+	 * 1. Reset float inherited from .span*	
+ 	 * 2. Change padding inherited from .span* with the one set for inputs
+ 	 */
+	 
+	button[class*="span"],
+	input[type="reset"][class*="span"],
+	input[type="submit"][class*="span"],
+	input[type="button"][class*="span"],
+	input[type="range"][class*="span"],
+	input[type="color"][class*="span"],
+	input[type="text"][class*="span"],
+	input[type="password"][class*="span"],
+	input[type="date"][class*="span"],
+	input[type="datetime"][class*="span"],
+	input[type="datetime-local"][class*="span"],
+	input[type="month"][class*="span"],
+	input[type="week"][class*="span"],
+	input[type="email"][class*="span"],
+	input[type="number"][class*="span"],
+	input[type="search"][class*="span"],
+	input[type="tel"][class*="span"],
+	input[type="time"][class*="span"],
+	input[type="url"][class*="span"],
+	textarea[class*="span"],
+	select[class*="span"] {
+		float: none; 		/* 1 */
+		padding: 10px 20px;  /* 2 */
+	}
+	
+	@media (min-width: 767px) {
+	
+		button.span12,
+		input[type="range"].span12,
+		input[type="color"].span12,
+		input[type="reset"].span12,
+		input[type="submit"].span12,
+		input[type="button"].span12,
+		input[type="text"].span12,
+		input[type="password"].span12,
+		input[type="date"].span12,
+		input[type="datetime"].span12,
+		input[type="datetime-local"].span12,
+		input[type="month"].span12,
+		input[type="week"].span12,
+		input[type="email"].span12,
+		input[type="number"].span12,
+		input[type="search"].span12,
+		input[type="tel"].span12,
+		input[type="time"].span12,
+		input[type="url"].span12,
+		textarea.span12,
+		select.span12 { width: 100%; }
+		
+		button.span11,
+		input[type="range"].span11,
+		input[type="color"].span11,
+		input[type="reset"].span11,
+		input[type="submit"].span11,
+		input[type="button"].span11,
+		input[type="text"].span11,
+		input[type="password"].span11,
+		input[type="date"].span11,
+		input[type="datetime"].span11,
+		input[type="datetime-local"].span11,
+		input[type="month"].span11,
+		input[type="week"].span11,
+		input[type="email"].span11,
+		input[type="number"].span11,
+		input[type="search"].span11,
+		input[type="tel"].span11,
+		input[type="time"].span11,
+		input[type="url"].span11,
+		textarea.span11,
+		select.span11 { width: 91.66666667%; }
+		
+		button.span10,
+		input[type="range"].span10,
+		input[type="color"].span10,
+		input[type="reset"].span10,
+		input[type="submit"].span10,
+		input[type="button"].span10,
+		input[type="text"].span10,
+		input[type="password"].span10,
+		input[type="date"].span10,
+		input[type="datetime"].span10,
+		input[type="datetime-local"].span10,
+		input[type="month"].span10,
+		input[type="week"].span10,
+		input[type="email"].span10,
+		input[type="number"].span10,
+		input[type="search"].span10,
+		input[type="tel"].span10,
+		input[type="time"].span10,
+		input[type="url"].span10,
+		textarea.span10,
+		select.span10 { width: 83.33333333%; }
+		
+		button.span9,
+		input[type="range"].span9,
+		input[type="color"].span9,
+		input[type="reset"].span9,
+		input[type="submit"].span9,
+		input[type="button"].span9,
+		input[type="text"].span9,
+		input[type="password"].span9,
+		input[type="date"].span9,
+		input[type="datetime"].span9,
+		input[type="datetime-local"].span9,
+		input[type="month"].span9,
+		input[type="week"].span9,
+		input[type="email"].span9,
+		input[type="number"].span9,
+		input[type="search"].span9,
+		input[type="tel"].span9,
+		input[type="time"].span9,
+		input[type="url"].span9,
+		textarea.span9,
+		select.span9 { width: 75%; }
+		
+		button.span8,
+		input[type="range"].span8,
+		input[type="color"].span8,
+		input[type="reset"].span8,
+		input[type="submit"].span8,
+		input[type="button"].span8,
+		input[type="text"].span8,
+		input[type="password"].span8,
+		input[type="date"].span8,
+		input[type="datetime"].span8,
+		input[type="datetime-local"].span8,
+		input[type="month"].span8,
+		input[type="week"].span8,
+		input[type="email"].span8,
+		input[type="number"].span8,
+		input[type="search"].span8,
+		input[type="tel"].span8,
+		input[type="time"].span8,
+		input[type="url"].span8,
+		textarea.span8,
+		select.span8 { width: 66.66666667%; }
+		
+		button.span7,
+		input[type="range"].span7,
+		input[type="color"].span7,
+		input[type="reset"].span7,
+		input[type="submit"].span7,
+		input[type="button"].span7,
+		input[type="text"].span7,
+		input[type="password"].span7,
+		input[type="date"].span7,
+		input[type="datetime"].span7,
+		input[type="datetime-local"].span7,
+		input[type="month"].span7,
+		input[type="week"].span7,
+		input[type="email"].span7,
+		input[type="number"].span7,
+		input[type="search"].span7,
+		input[type="tel"].span7,
+		input[type="time"].span7,
+		input[type="url"].span7,
+		textarea.span7,
+		select.span7 { width: 58.33333333%; }
+		
+		button.span6,
+		input[type="range"].span6,
+		input[type="color"].span6,
+		input[type="reset"].span6,
+		input[type="submit"].span6,
+		input[type="button"].span6,
+		input[type="text"].span6,
+		input[type="password"].span6,
+		input[type="date"].span6,
+		input[type="datetime"].span6,
+		input[type="datetime-local"].span6,
+		input[type="month"].span6,
+		input[type="week"].span6,
+		input[type="email"].span6,
+		input[type="number"].span6,
+		input[type="search"].span6,
+		input[type="tel"].span6,
+		input[type="time"].span6,
+		input[type="url"].span6,
+		textarea.span6,
+		select.span6 { width: 50%; }
+		
+		button.span5,
+		input[type="range"].span5,
+		input[type="color"].span5,
+		input[type="reset"].span5,
+		input[type="submit"].span5,
+		input[type="button"].span5,
+		input[type="text"].span5,
+		input[type="password"].span5,
+		input[type="date"].span5,
+		input[type="datetime"].span5,
+		input[type="datetime-local"].span5,
+		input[type="month"].span5,
+		input[type="week"].span5,
+		input[type="email"].span5,
+		input[type="number"].span5,
+		input[type="search"].span5,
+		input[type="tel"].span5,
+		input[type="time"].span5,
+		input[type="url"].span5,
+		textarea.span5,
+		select.span5 { width: 41.66666667%; }
+		
+		button.span4,
+		input[type="range"].span4,
+		input[type="color"].span4,
+		input[type="reset"].span4,
+		input[type="submit"].span4,
+		input[type="button"].span4,
+		input[type="text"].span4,
+		input[type="password"].span4,
+		input[type="date"].span4,
+		input[type="datetime"].span4,
+		input[type="datetime-local"].span4,
+		input[type="month"].span4,
+		input[type="week"].span4,
+		input[type="email"].span4,
+		input[type="number"].span4,
+		input[type="search"].span4,
+		input[type="tel"].span4,
+		input[type="time"].span4,
+		input[type="url"].span4,
+		textarea.span4,
+		select.span4 { width: 33.33333333%; }
+		
+		button.span3,
+		input[type="range"].span3,
+		input[type="color"].span3,
+		input[type="reset"].span3,
+		input[type="submit"].span3,
+		input[type="button"].span3,
+		input[type="text"].span3,
+		input[type="password"].span3,
+		input[type="date"].span3,
+		input[type="datetime"].span3,
+		input[type="datetime-local"].span3,
+		input[type="month"].span3,
+		input[type="week"].span3,
+		input[type="email"].span3,
+		input[type="number"].span3,
+		input[type="search"].span3,
+		input[type="tel"].span3,
+		input[type="time"].span3,
+		input[type="url"].span3,
+		textarea.span3,
+		select.span3 { width: 25%; }
+		
+		button.span2,
+		input[type="range"].span2,
+		input[type="color"].span2,
+		input[type="reset"].span2,
+		input[type="submit"].span2,
+		input[type="button"].span2,
+		input[type="text"].span2,
+		input[type="password"].span2,
+		input[type="date"].span2,
+		input[type="datetime"].span2,
+		input[type="datetime-local"].span2,
+		input[type="month"].span2,
+		input[type="week"].span2,
+		input[type="email"].span2,
+		input[type="number"].span2,
+		input[type="search"].span2,
+		input[type="tel"].span2,
+		input[type="time"].span2,
+		input[type="url"].span2,
+		textarea.span2,
+		select.span2 { width: 16.66666667%; }
+		
+		button.span1,
+		input[type="range"].span1,
+		input[type="color"].span1,
+		input[type="reset"].span1,
+		input[type="submit"].span1,
+		input[type="button"].span1,
+		input[type="text"].span1,
+		input[type="password"].span1,
+		input[type="date"].span1,
+		input[type="datetime"].span1,
+		input[type="datetime-local"].span1,
+		input[type="month"].span1,
+		input[type="week"].span1,
+		input[type="email"].span1,
+		input[type="number"].span1,
+		input[type="search"].span1,
+		input[type="tel"].span1,
+		input[type="time"].span1,
+		input[type="url"].span1,
+		textarea.span1,
+		select.span1 { width: 8.33333333%; }
+		
+	}	

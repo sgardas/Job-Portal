@@ -1,0 +1,761 @@
+/**
+ * 	Name: layout.css
+ *
+ *  Styling for the layout of the pages - header, footer, page sections etc.
+ *
+ *  T.O.C
+ *
+ *	=Wrap
+ *	=Header Top
+ *	=Header
+ *	=Logo
+ *	=Menu
+ *		=Menu Basics
+ *		=Menu Skin
+ *		=DropDown
+ *		=Mega Menu Section
+ *		=Menu Arrows
+ *	=Mobile Menu 
+ *	=Mobile menu trigger
+ *	=Custom search form 
+ *	=Sticky Header
+ *	=Content
+ *	=Page Header
+ *	=Fullwidth Section
+ *	=Footer Top
+ *	=Footer
+ *	=Footer Bottom
+ *	=Back to top
+ *	=Misc 
+ *
+ */
+ 
+/* ==========================================================================
+   =Wrap
+   ========================================================================== */
+
+	#wrap {
+		position: relative;
+		background-color: #fff;
+	}
+	
+	@media (max-width: 767px) {
+
+		#wrap {}
+
+	}
+
+/* ==========================================================================
+	=Header Top
+	========================================================================== */
+   
+   #header-top {
+		padding: 10px 0;
+		background-color: #f3f3f3;
+   }
+   
+   @media (max-width: 767px) {
+
+		#header-top {}
+
+	}
+   
+/* ==========================================================================
+   =Header 
+   ========================================================================== */
+   	
+	#header {
+		margin: 0 auto; 
+	}
+	
+/* ==========================================================================
+   =Logo
+   ========================================================================== */
+   
+	#logo {  
+		padding: 0;
+		    text-align: center;
+	}
+	
+	/**
+	 * 1. we need the <a> to be only the size of it's child <img> element
+	 * 2. it shouldn't extend beyond the size of it's parent if it's child <img> is very large e.g 1000x1000 px
+	 */
+	
+	#logo a {
+		display: inline-block; /* 1 */
+		max-width: 100%; 	   /* 2 */
+	}
+	
+	#logo img { display: block; }	
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+	
+		#logo { padding: 25px 0; }
+		
+	}
+	
+	@media (max-width: 767px) {
+
+		/**
+		 * 1. on mobile devices logo padding right needs to be the width of the
+		 *	  mobile menu trigger + some spacing so as to not let the logo <a>
+		 *    overlap the mobile menu trigger
+		 */
+	
+		#logo {
+			padding: 25px 50px 25px 0;  /* 1 */
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Menu 
+   ========================================================================== */
+
+/* =Menu Basics
+   ========================================================================== */
+   
+	.sf-menu,
+	.sf-menu ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+	.sf-menu > li { float: left; }
+
+	.sf-menu > li > a {
+		position: relative;
+		display: block;
+		font-family: 'Oswald', sans-serif;
+	}
+	
+	/**
+ 	 * 1. z-index is 1025 because the sticky menu is 1020
+ 	 */
+	
+	.sf-menu .sf-mega,
+	.sf-menu li.dropdown ul {
+		position: absolute;
+		z-index: 1025;		/* 1 */
+		top: 100%;
+		left: 0;
+		display: none;
+	}
+	
+	.sf-menu li.dropdown { position: relative; }
+	
+	.sf-menu li.dropdown ul ul {
+		top: -20px;
+		left: 100%;
+	}
+	
+	.sf-menu li:hover > .sf-mega,
+	.sf-menu li.sfHover > .sf-mega,
+	.sf-menu li.dropdown:hover > ul,
+	.sf-menu li.dropdown.sfHover > ul { display: block; }
+
+/* =Menu Skin
+   ========================================================================== */
+	
+	.sf-menu { float: left; } 
+	
+	.sf-menu a {
+		display: block;
+		padding: 10px 0;
+		border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+		
+		letter-spacing: 0.5px;
+		color: #fff; 
+		text-decoration: none;
+	}
+	
+	.sf-menu li.dropdown a { padding: 10px 20px 5px; }
+	
+	.sf-menu li:last-child > a { border-bottom: none; }
+	
+	.sf-menu > li > a,
+	.sf-menu > li.dropdown > a {
+		    padding: 55px 0 0px 0px;
+    border: none;
+    margin-right: 00px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+	
+    letter-spacing: 1px;
+    text-transform: capitalize;
+	}
+	
+	.sf-menu > li:last-child > a,
+	.sf-menu > li:last-child.dropdown > a { margin-right: 0; } 
+	
+	.sf-menu > li > a span {
+		display: inline-block;
+		padding: 10px 35px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.sf-menu > li a i { margin-right: 5px; }
+	
+	.sf-menu > li.current > a span,
+	.sf-menu li.sfHover > a span,
+	.sf-menu a:hover span,
+	.sf-menu li.sfHover a:hover span {
+		background-color: #f9b125;
+		color: #fff;
+		text-decoration: none;	
+	}
+
+/* =DropDown
+   ========================================================================== */
+	
+	/**
+ 	 * 1. allow long menu items to determine submenu width
+ 	 */
+	
+	.sf-menu li.dropdown ul {
+		min-width: 300px; 	/* 1 */	
+		padding: 20px 0;
+		background-color: #222;			
+	}
+
+	.sf-menu > li.dropdown ul { border-bottom: 10px solid #f9b125;
+	border-radius: 0px 0px 10px 10px; }
+	
+	.sf-menu > li.dropdown ul li.sfHover > a,
+	.sf-menu > li.dropdown ul li a:hover { color: #f9b125; }	
+		
+/* =Mega Menu Section
+   ========================================================================== */
+	
+	.sf-mega {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 20px 0;
+		border-bottom: 10px solid #f9b125;
+		background-color: #222;
+		color: #fff;
+	}
+
+	.sf-mega-section {
+		float: left;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 30px;
+	}
+	
+	.sf-mega-section:last-child { border-right: none; }
+
+	/**
+ 	 * 1. set mega menu section size, as a percentage of the mega menu width
+ 	 */
+	
+	.sf-mega.sf-mega-1-col .sf-mega-section{ width: 100%; } /* 1 */
+	
+	.sf-mega.sf-mega-2-col .sf-mega-section{ width: 50%; }
+	
+	.sf-mega.sf-mega-3-col .sf-mega-section{ width: 33.3333333333%; }
+	
+	.sf-mega.sf-mega-4-col .sf-mega-section{ width: 25%; }
+	
+	.sf-mega-section-title {
+		margin: 10px 0 20px 0;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	
+	.sf-mega-section ul li a:hover { color: #f9b125; }
+	
+/* =Menu Arrows
+   ========================================================================== */
+	
+	.sf-arrows .sf-with-ul:after {
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		display: none;
+		width: 0;
+		height: 0;
+		border: 4px solid transparent;
+		border-top-color: #888;
+		margin-top: -2px;
+		content: "";
+	}
+		
+	.sf-arrows > li > .sf-with-ul:focus:after,
+	.sf-arrows > li:hover > .sf-with-ul:after,
+	.sf-arrows > .sfHover > .sf-with-ul:after,
+	.sf-arrows > .current > .sf-with-ul:after { border-top-color: #fff; }
+		
+	.sf-arrows ul .sf-with-ul:after {
+		display: block;
+		border-color: transparent;
+		border-left-color: #fff;
+		margin-top: -5px;
+		margin-right: 10px;
+	}
+	
+	.sf-arrows ul li > .sf-with-ul:focus:after,
+	.sf-arrows ul li:hover > .sf-with-ul:after,
+	.sf-arrows ul .sfHover > .sf-with-ul:after { border-left-color: #f9b125; }
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#menu { display: none; }
+
+	}
+	
+	@media (max-width: 767px) {
+
+		#menu { display: none; }
+	
+	}
+	
+/* ==========================================================================
+   =Mobile Menu 
+   ========================================================================== */
+			
+	#mobile-menu {
+		border-bottom: 1px solid #fff;
+		margin-bottom: 0;
+		background-color: #f9b125;
+		color: #fff;
+	}
+	
+	#mobile-menu li {	
+		display: block;
+		margin: 0;
+	}
+		
+	#mobile-menu > li > ul, 
+	#mobile-menu > li > ul > li > ul {
+		display: none;
+		margin-left: 0;
+	}
+	
+	#mobile-menu .sf-mega {
+		display: none;
+		padding: 0;
+		border: none;
+		margin: 0;
+		background-color: #f9b125;
+		color: #fff;
+	}
+	
+	#mobile-menu .sf-mega-section {
+		float: none;
+		width: 100%;
+		padding: 0;
+		border: none;
+	}
+	
+	#mobile-menu .sf-mega-section-title {
+		padding: 15px 20px;
+		border-top: 1px solid #fff;
+	}
+	
+	#mobile-menu .sf-mega-section ul { margin-left: 0; }
+
+	#mobile-menu li a {
+		position: relative;
+		display: block;
+		padding: 15px 25px;
+		border-top: 1px solid #fff;
+		color: #fff;
+		font-size: 13px;
+		text-align: left;
+		text-decoration: none;
+	}
+	
+	#mobile-menu ul { margin-bottom: 0; }
+	
+	#mobile-menu ul a { padding-left: 45px; }
+	
+	#mobile-menu ul li ul a  { padding-left: 65px; }
+	
+	#mobile-menu .mobile-menu-submenu-arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 100%;
+		border-left: 1px solid #fff;
+		color: #fff;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	#mobile-menu .mobile-menu-submenu-arrow:hover { background-color: #ee9f23; }
+	
+	#mobile-menu li a:hover {}
+	
+	#mobile-menu { display: none; }
+
+/* ==========================================================================
+   =Mobile menu trigger
+   ========================================================================== */
+				
+	#mobile-menu-trigger { 
+		float: right;
+		display: none;
+		font-size: 32px;
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#mobile-menu-trigger { 
+			display: block;
+			margin-top: 55px;
+			margin-right: 0;
+		}	
+
+	}
+
+	@media (max-width: 767px) {
+
+		#mobile-menu-trigger { 
+			position: absolute;
+			top: 45px;
+			right: 5px;
+			display: block;
+			padding: 10px;
+			margin-top: 0;
+		}
+
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		#mobile-menu-trigger {}
+	
+	}		
+		
+/* ==========================================================================
+   =Custom search form 
+   ========================================================================== */
+	
+	#custom-search-form + nav { margin-right: 40px; }
+	
+	#custom-search-form {
+		position: absolute;
+		top: 71px;
+		right: 0;
+		z-index: 15;
+	}
+	
+	#custom-search-form #s {
+		height: 46px;
+		width: 34px;
+		padding-right: 0;
+		border: none;
+		background: #fff url(../images/bg-search.png) no-repeat 10px 15px;
+	    color: #022b36;
+	}
+	
+	#custom-search-form #s:hover { cursor: pointer; }
+	
+	#custom-search-form #s.open {
+	    border: 2px solid #e6e6e6;
+		background: #fff;
+	}
+	
+	#custom-search-submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #f9b125 url(../images/bg-search-2.png) no-repeat center center;
+		display: none;
+	}
+	
+	#custom-search-form #s.open + #custom-search-submit { display: block; }
+	
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		#custom-search-form { 
+			top: 50px;
+			right: 60px;
+		}
+		
+	}
+	
+	@media (max-width: 767px) {
+
+		/**
+		 * Hide search on mobile
+		 */
+		 
+		/**
+		 * 1. !important is needed to overwrite the display:block added by the js
+		 */ 
+	
+		#custom-search-form { 
+			display: none !important; /* 1 */
+		}
+		
+	}
+
+/* ==========================================================================
+   =Sticky Header
+   ========================================================================== */
+
+	@media (min-width: 1025px) {
+		
+		/**
+		 * 1. The height of the #header-wrap should be increased or decreased to accommodate the logo
+		 */
+		 
+		#header-wrap {
+		
+			position: relative;
+			height: 150px; /* 1 */
+			   
+		}
+		
+		#header {
+			position: absolute;
+			top: 0; 					
+			right: 0;
+			left: 0;
+			margin: 0 auto; 
+			
+		}
+		
+		/**
+		 * 1. The z-index has to be 1020 so it is bigger than the back to top buttons z-index that is 1010
+		 */
+		
+		#header.stuck {
+			position: fixed;
+			z-index: 1020; /* 1 */
+			top: 0;
+			width: 100%;
+			padding: 5px 0 0 0;
+			margin: 0 auto;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);			
+			background-color: #fff;
+			-webkit-transition: padding 0.3s;
+					transition: padding 0.3s;
+		}
+		
+		#header.stuck #logo { padding: 5px 0 15px 0; }
+		
+		#header.stuck .sf-menu > li > a,
+		#header.stuck .sf-menu > li.dropdown > a { padding: 35px 3px; }
+
+		#header.stuck .sf-arrows .sf-with-ul:after { margin-top: -5px; }		
+	
+		#header.stuck #custom-search-button { top: 12px; }
+		#header.stuck #custom-search-form { top: 30px; }
+	
+	}
+	
+/* ==========================================================================
+   =Content
+   ========================================================================== */
+   	
+	#content { padding-bottom: 0px; }
+
+/* ==========================================================================
+   =Page Header
+   ========================================================================== */
+   	
+	#page-header { 
+		padding: 30px 0;
+		margin-bottom: 100px;
+		/*background: url(../images/bg-page-header.jpg) no-repeat center center;*/
+		text-align: center;
+	}
+	
+	#page-header h5 { 
+		margin-bottom: 0;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+/* ==========================================================================
+   =Fullwidth Section
+   ========================================================================== */
+   
+    /**
+ 	 * Full width section
+ 	 *
+	 * 1. background-image must be supplied using inline css as it is different for every .fullwidth-section
+	 *
+	 */
+	 
+   .fullwidth-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 0;	
+		padding: 40px 0;
+		margin-bottom: 100px;
+		background-color: #f6f6f6;
+		background-attachment: scroll;
+		background-repeat: no-repeat; /* 1 */ 
+		background-position: 50% 0;		
+	}
+
+	.fullwidth-section-content {
+		position: relative;
+		z-index: 3;
+	}
+   
+   	.fullwidth-section-overlay {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: repeat;
+		background-position: 0 0;
+		background-color: rgba(0, 0, 0, 0.5);	
+	}
+	
+	.fullwidth-section-video {
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.yt-player { display: none; }
+	
+	/**
+ 	 *
+	 * 1. We add background-size cover so the parallax looks ok if you provide smaller images
+	 *
+	 */
+	
+	.parallax.parallax-enabled { 
+		background-attachment: fixed !important;
+		-webkit-background-size: cover;
+				background-size: cover;	/* 1 */
+	}
+	
+	.horizontal-parallax { background-repeat: repeat; }
+	
+	.animated-parallax { background-repeat: repeat; }
+	
+	@media (max-width: 767px) {
+
+		.fullwidth-section {
+			-webkit-background-size: cover;
+					background-size: cover;		
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Footer Top
+   ========================================================================== */
+
+	#footer-top {
+		padding: 40px 0; 
+		background: #f9b125 url(../images/bg-footer-top.jpg) no-repeat center center;
+		color: #fff;
+	}
+	
+	#footer-top a { color: #fff; } 
+	
+	#footer-top-widget-area-1 {}
+	#footer-top-widget-area-2 {}
+	#footer-top-widget-area-3 {}
+	#footer-top-widget-area-4 {}
+   
+/* ==========================================================================
+   =Footer
+   ========================================================================== */		
+	
+	#footer { 
+		padding: 15px 0;	
+		background-color: #222;
+		color: #888;
+		font-size: 13px;
+	}
+	
+	#footer a { color: #FFFFFF; } 
+	
+	#footer-widget-area-1 {}
+	#footer-widget-area-2 {}
+	#footer-widget-area-3 {}
+	#footer-widget-area-4 {}
+	
+/* ==========================================================================
+   =Footer Bottom
+   ========================================================================== */	
+  
+	#footer-bottom { 
+		padding: 20px 0;	
+		background-color: #1a1a1a;
+		color: #3e3e3e;
+		font-size: 13px;
+	}
+	
+	#footer-bottom a { color: #3e3e3e; } 
+	
+	#footer-bottom-widget-area-1 {}
+	#footer-bottom-widget-area-2 {}
+	#footer-bottom-widget-area-3 {}
+	#footer-bottom-widget-area-4 {}
+	
+/* ==========================================================================
+   =Back to top
+   ========================================================================== */
+
+	#back-to-top {
+		position: fixed;
+		z-index: 1010;
+		right: -40px;
+		bottom: 20px;
+		width: 40px;
+		height: 40px;
+		background-color: #222;
+		color: #fafafa;
+		font-size: 30px;
+		text-align: center;
+		text-decoration: none;
+		opacity: 0.7;
+		cursor: pointer;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top i {
+		font-size: 22px;
+		line-height: 40px;
+		font-weight: normal;
+		vertical-align: top;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top:hover { background-color: rgba(0, 0, 0, 0.7); }
+	#back-to-top:hover i { color: #fff; }
+	#back-to-top.visible { right: 40px; }
+	#back-to-top.gone { right: -40px; }	
+
+/* ==========================================================================
+   =Misc
+   ========================================================================== */
+   
+	.javascript-required,
+	.modern-browser-required {
+	    padding: 15px 0;
+		background-color: #ff3225;
+		color: #fff;
+		font-weight: 700;
+		text-align: center;
+	}

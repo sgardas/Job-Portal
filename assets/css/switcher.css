@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+.switcher {
+    background: #fff none repeat scroll 0 0;
+    position: fixed;
+    top: 190px;
+    width: 205px;
+    z-index: 1030;
+}
+.switcher h3 {
+    background: #333333 none repeat scroll 0 0;
+    color: #fff;
+    padding: 0 25px;
+    text-transform: uppercase;
+}
+.switcher h5 {
+    border-bottom: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    font-size: 12px;
+    margin: 20px -20px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+.switcher h5:first-child {
+    border-top: medium none;
+    margin-top: 0;
+}
+.switcher h3 a {
+    background-color: #333;
+    border-radius: 0 3px 3px 0;
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    padding: 10px 15px;
+    position: absolute;
+    right: -53px;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+}
+.switcher h3 a:hover {
+    text-decoration: none;
+}
+.switcher .content {
+    border: 1px solid #efefef;
+    padding: 0 20px 20px;
+}
+.layout-switcher a.layout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #eaeaea;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    color: #797878;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 7px;
+    text-align: center;
+    width: 50px;
+}
+.layout-switcher a.layout:hover {
+    background-color: #f9f9f9;
+    text-decoration: none;
+}
+.layout-switcher {
+    overflow: hidden;
+}
+.switcher-box, .bg.hidden {
+    margin: 0 -2px;
+    overflow: hidden;
+}
+.pattern {
+    box-shadow: 0 0 0 1px #eaeaea inset;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 26px;
+    margin: 0 2px 4px;
+    width: 24px;
+}
+.styleswitch {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 26px;
+    margin: 0 4px 4px 0;
+    width: 24px;
+}
+#bg.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body.png") no-repeat scroll left top;
+}
+#bg2.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body2.png") no-repeat scroll left top;
+}
+#bg3.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body3.png") no-repeat scroll left top;
+}
+#bg4.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body4.png") no-repeat scroll left top;
+}
+#bg5.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body5.png") no-repeat scroll left top;
+}
+#bg6.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body6.png") no-repeat scroll left top;
+}
+#bg7.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body7.png") no-repeat scroll left top;
+}
+#bg8.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body8.png") no-repeat scroll left top;
+}
+#bg9.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body9.png") no-repeat scroll left top;
+}
+#bg10.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body10.png") no-repeat scroll left top;
+}
+#bg11.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body11.png") no-repeat scroll left top;
+}
+#bg12.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body12.png") no-repeat scroll left top;
+}
+#bg13.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body13.png") no-repeat scroll left top;
+}
+#bg14.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body14.png") no-repeat scroll left top;
+}
+#bg15.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body15.png") no-repeat scroll left top;
+}
+#bg16.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body16.png") no-repeat scroll left top;
+}
+#bg17.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body17.png") no-repeat scroll left top;
+}
+#bg18.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body18.png") no-repeat scroll left top;
+}
+#bg19.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body19.png") no-repeat scroll left top;
+}
+#bg20.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body20.png") no-repeat scroll left top;
+}
+#bg21.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body21-thumb.png") no-repeat scroll left top;
+}
+#bg22.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body22-thumb.png") no-repeat scroll left top;
+}
+#bg23.pattern {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body23-thumb.png") no-repeat scroll left top;
+}
+.bg {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body.png") repeat scroll left top;
+}
+.bg2 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body2.png") repeat scroll left top;
+}
+.bg3 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body3.png") repeat scroll left top;
+}
+.bg4 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body4.png") repeat scroll left top;
+}
+.bg5 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body5.png") repeat scroll left top;
+}
+.bg6 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body6.png") repeat scroll left top;
+}
+.bg7 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body7.png") repeat scroll left top;
+}
+.bg8 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body8.png") repeat scroll left top;
+}
+.bg9 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body9.png") repeat scroll left top;
+}
+.bg10 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body10.png") repeat scroll left top;
+}
+.bg11 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body11.png") repeat scroll left top;
+}
+.bg12 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body12.png") repeat scroll left top;
+}
+.bg13 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body13.png") repeat scroll left top;
+}
+.bg14 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body14.png") repeat scroll left top;
+}
+.bg15 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body15.png") repeat scroll left top;
+}
+.bg16 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body16.png") repeat scroll left top;
+}
+.bg17 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body17.png") repeat scroll left top;
+}
+.bg18 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body18.png") repeat scroll left top;
+}
+.bg19 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body19.png") repeat scroll left top;
+}
+.bg20 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body20.png") repeat scroll left top;
+}
+.bg21 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body21.jpg") no-repeat fixed left top;
+}
+.bg22 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body22.jpg") no-repeat fixed left top;
+}
+.bg23 {
+    background: rgba(0, 0, 0, 0) url("../../images/bg-body23.jpg") no-repeat fixed left top;
+}
+#default.styleswitch {
+    background-color: #f9b125;
+}
+#blue.styleswitch {
+    background-color: #0294c9;
+}
+#green.styleswitch {
+    background-color: #73c902;
+}
+#purple.styleswitch {
+    background-color: #903496;
+}
+@media (max-width: 1025px) {
+.switcher {
+    display: none;
+}
+}
+
+
