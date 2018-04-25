@@ -30,42 +30,38 @@ Software Development: NetBeans.
 
 
  
-JOB PORTAL WEB APPLICATION
-TEAM STRUCTURE
+# JOB PORTAL WEB APPLICATION
+# TEAM STRUCTURE
 For these Job Portal Web application project group of five members are divide into two sub teams.
 Team1, Team2.
-TEAM MEMBERS
+# TEAM MEMBERS
 •	Team1: Bharadwaj Nallavelli, Shravya Goli
 •	Team2: Sarjith Rao Gona, Satwik Gardas, Alekya Reddy Venkatapuram.
-TEAM ASSIGNMENTS
-The team roles and Goals are:
-Name of team	Team goals	Team roles
+# TEAM ASSIGNMENTS:
+
 Team1:	Making Frond end Php pages	Index page, front end pages and design and templates and php pages
 Team2:	Backend pages, Mysql database	Connecting front end with database, jquery page
 
-Introduction:
+# Introduction:
 
-About Project:
 Online Job portal is a Web application built with PHP. It provides the ability to Job seekers to register to this Web application and search for Jobs and manage their accounts.
 On the other hand Recruiters, whose goal is to recruit the candidates must register to this application and the recruiter can see the candidates Resume and can select the candidate based on their interest and department specialization. 
-
-Main Goal: Main goal of this project is to provide the best and co-op services for UMASS Lowell students where the students can upload their Resume to their account and can forward their Resume to the desired Job listed and the recruiters can for the Interview based on their Requirement of the Job.
+ Main goal of this project is to provide the best and co-op services for UMASS Lowell students where the students can upload their Resume to their account and can forward their Resume to the desired Job listed and the recruiters can for the Interview based on their Requirement of the Job.
 The purpose of this application is to make friendly Platform for Jobseekers and recruite
 
-Modules:
+# Modules:
 The main Users in the project can be categorized into three modules as follows:
 1.	Admin
 2.	Employer (Recruiter)
 3.	Job seeker
 
 
-Definition, Acronyms, and Abbreviations:
+# Definition, Acronyms, and Abbreviations:
 1.	Admin: The Authorized person who controls all the network.
 2.	Employer: Who can Recruit.
 3.	Job seeker: The person who will applies for Job.
 
-Requirement Analysis:
-Functional Requirement:
+# Functional Requirement:
 1.Admin:
 •	Manage the profiles of Job seekers and Employers.
 •	Add new Services to both Employers and Job seekers.
@@ -82,9 +78,6 @@ Functional Requirement:
 •	Can update the password by contacting the admin.
 •	Update profile at any time.
 •	Download CV or application submitted by job seeker.
-
-
-
 
 Job seekers:
 •	Apply for Job with the click of a button.
@@ -103,7 +96,7 @@ Non-Functional requirements:
 
 
 
-HARDWARE REQUIREMENTS:
+# HARDWARE REQUIREMENTS:
 
 Hardware Requirements:
 •	Processor	: Intel Pentium and above.
@@ -120,7 +113,7 @@ Software Requirements:
 
 
 
-Installation Procedure:
+# Installation Procedure:
 
 	Download Xampp consisting the packages Apache, Tomcat, MYSQLi.
 	Install the whole package.
@@ -137,9 +130,7 @@ http://www.wikihow.com/Install-XAMPP-for-Windows
 	After importing the MYSQL source into PHPmyadmin close the browser and type URL as localhost/jobportal
 	Then you can see the Homepage.
 
-
-
-Conclusion and Future Work:
+#Conclusion and Future Work:
 Here, I have designed a project “Online Job Portal” using PHP, JavaScript and JQuery and CSS. All the application codes are in PHP with JavaScript and JQuery backend. The project provides all the features for the support of Job portal. As it is the beta version all the features may not be included due to insufficient time so the functionalities may be limited. Our project satisfies what had mentioned in the project requirements. In future we will add some features like adding job by employer, updated password Hashing, template design, best search implementation with mobile applicable app.  
 
 
